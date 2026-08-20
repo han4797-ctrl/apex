@@ -1525,6 +1525,40 @@ ul, ol { list-style: none; }
 
 /* ---------- Breakpoints ---------- */
 @media (max-width: 767px) {
+  .hero {
+    min-height: 0;
+    align-items: stretch;
+  }
+  .hero-inner { padding: 92px 0 28px; }
+  .hero h1 { font-size: clamp(32px, 10vw, 42px); }
+  .hero-lead {
+    margin: 12px 0 18px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  .hero-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 22px;
+    padding-top: 16px;
+  }
+  .hero-stats strong { font-size: 20px; }
+  .hero-stats span { font-size: 11px; }
+  .materials { grid-auto-rows: 132px; }
+  .strip article { padding: 18px 4px; }
+  .section { padding: 44px 0; }
+  .section-head { margin-bottom: 20px; }
+  .about-grid { gap: 20px; }
+  .about-photo { margin-top: 16px; }
+  .about-photo img { height: 180px; }
+  .about-profile,
+  .org-wrap { margin-top: 28px; }
+  .org-board { padding: 18px 12px 16px; }
+  .divisions,
+  .principles,
+  .facts { margin-top: 18px; }
+  .contact-desks,
+  .contact-list { margin-top: 16px; }
   .map-pin-dot { width: 11px; height: 11px; border-width: 2px; }
 }
 
