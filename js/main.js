@@ -698,7 +698,11 @@ syncHeader();
 
 /* ---------- Reveal (Intersection Observer) ---------- */
 function revealNow(root) {
-  (root || document).querySelectorAll(".reveal").forEach((el) => {
+  const scope = root || document;
+  if (scope.classList && scope.classList.contains("reveal")) {
+    scope.classList.add("is-visible");
+  }
+  scope.querySelectorAll(".reveal").forEach((el) => {
     el.classList.add("is-visible");
   });
 }
@@ -717,7 +721,7 @@ function initReveal() {
         io.unobserve(entry.target);
       });
     },
-    { threshold: 0.12, rootMargin: "0px 0px -48px 0px" }
+    { threshold: 0.01, rootMargin: "0px 0px -24px 0px" }
   );
 
   document.querySelectorAll(".reveal").forEach((el) => {

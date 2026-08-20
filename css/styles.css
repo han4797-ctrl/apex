@@ -638,6 +638,7 @@ ul, ol { list-style: none; }
 .org-partner strong { font-family: Outfit, Pretendard, sans-serif; }
 .about-profile .sheet-tabs { margin-bottom: 18px; }
 .profile-sheet[hidden] { display: none; }
+.profile-sheet { opacity: 1; transform: none; }
 .profile-block { margin-top: 28px; }
 .profile-block:first-child { margin-top: 0; }
 .profile-kicker {
