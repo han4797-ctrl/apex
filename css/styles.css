@@ -1494,22 +1494,6 @@ ul, ol { list-style: none; }
   font-weight: 600;
 }
 
-.call-fab {
-  position: fixed;
-  right: 16px;
-  bottom: 16px;
-  z-index: 40;
-  background: var(--gold);
-  color: var(--navy);
-  height: 48px;
-  padding: 0 18px;
-  border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
-  font-weight: 700;
-  box-shadow: 0 12px 30px rgba(184, 149, 90, 0.35);
-}
-
 /* ---------- Reveal (driven by Intersection Observer) ---------- */
 .reveal {
   opacity: 0;
@@ -1646,8 +1630,7 @@ ul, ol { list-style: none; }
 
 @media (min-width: 1024px) {
   .menu-btn,
-  .nav-overlay,
-  .call-fab { display: none; }
+  .nav-overlay { display: none; }
 
   .nav {
     position: static;
