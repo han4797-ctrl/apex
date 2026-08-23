@@ -26,6 +26,8 @@
   --ops: #4a7089;
   --laptop: #5f7d8c;
   --tablet: #7a8fa0;
+  --dross: #7a8680;
+  --drone: #3f6f62;
   --header: 72px;
   --header-compact: 60px;
   --radius: 18px;
@@ -992,6 +994,8 @@ ul, ol { list-style: none; }
 [data-tone="ops"] { --accent: var(--ops); }
 [data-tone="laptop"] { --accent: var(--laptop); }
 [data-tone="tablet"] { --accent: var(--tablet); }
+[data-tone="dross"] { --accent: var(--dross); }
+[data-tone="drone"] { --accent: var(--drone); }
 
 /* ---------- Resources briefing ---------- */
 .briefing { background: var(--paper); }
@@ -1737,6 +1741,9 @@ ul, ol { list-style: none; }
 
 @media (min-width: 1280px) {
   .hero-inner { padding-bottom: 80px; }
+  .materials {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
