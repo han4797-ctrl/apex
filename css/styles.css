@@ -17,6 +17,7 @@
   --gold: #2f9ed8;
   --gold-2: #5eb8e6;
   --gold-soft: #e7f5fc;
+  --gold-ink: #1a73a6;   /* 밝은 배경 위 텍스트용 (AA 4.5:1+) */
   --copper: #b87333;
   --aluminum: #8a97a4;
   --tin: #6f8078;
@@ -289,7 +290,7 @@ ul, ol { list-style: none; }
   background: none;
   border: 0;
   padding: 0;
-  color: var(--gold);
+  color: var(--gold-ink);
   font-weight: 700;
   cursor: pointer;
   letter-spacing: 0.02em;
@@ -331,7 +332,7 @@ ul, ol { list-style: none; }
 }
 
 .eyebrow {
-  color: var(--gold-2);
+  color: var(--gold-ink);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -449,7 +450,7 @@ ul, ol { list-style: none; }
 .strip span {
   display: block;
   font-family: Outfit, serif;
-  color: var(--gold);
+  color: var(--gold-ink);
   font-size: 22px;
   margin-bottom: 8px;
 }
@@ -567,7 +568,7 @@ ul, ol { list-style: none; }
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-ink);
   margin-bottom: 4px;
 }
 .org-card strong {
@@ -648,7 +649,7 @@ ul, ol { list-style: none; }
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-ink);
   margin-bottom: 6px;
 }
 .profile-block h4 {
@@ -959,7 +960,7 @@ ul, ol { list-style: none; }
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.14em;
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 .doc-btn strong {
   display: block;
@@ -1117,7 +1118,7 @@ ul, ol { list-style: none; }
 }
 .briefing-steps strong {
   font-family: Outfit, serif;
-  color: var(--gold);
+  color: var(--gold-ink);
   font-size: 20px;
 }
 .briefing-steps h5 {
@@ -1246,13 +1247,13 @@ ul, ol { list-style: none; }
 .location-card[data-network="korea"] .location-type { color: var(--slate); }
 .location-index {
   font-family: Outfit, serif;
-  color: var(--slate-2);
+  color: var(--muted);
   font-size: 22px;
   line-height: 1;
 }
 .location-type {
   margin-bottom: 3px;
-  color: var(--gold);
+  color: var(--gold-ink);
   font-family: Outfit, serif;
   font-size: 13px;
   font-weight: 700;
@@ -1347,7 +1348,7 @@ ul, ol { list-style: none; }
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-ink);
   margin-bottom: 4px;
 }
 .contact-desk:not(.is-front) .contact-desk-kicker { color: var(--slate); }
@@ -1388,7 +1389,7 @@ ul, ol { list-style: none; }
   font-size: 18px;
   font-weight: 650;
 }
-.contact-list a:hover { color: var(--gold); }
+.contact-list a:hover { color: var(--gold-ink); }
 .addr-en {
   margin-top: 16px;
   color: var(--muted);
@@ -1406,7 +1407,7 @@ ul, ol { list-style: none; }
 }
 .form-head { margin-bottom: 4px; }
 .form-kicker {
-  color: var(--gold);
+  color: var(--gold-ink);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -1605,11 +1606,11 @@ ul, ol { list-style: none; }
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.14em;
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 .lib-meta {
   font-size: 11px;
-  color: var(--slate-2);
+  color: var(--muted);
   letter-spacing: 0.01em;
 }
 .lib-new {
@@ -1637,7 +1638,7 @@ ul, ol { list-style: none; }
   margin-top: 2px;
   font-size: 12px;
   font-weight: 700;
-  color: var(--gold);
+  color: var(--gold-ink);
   display: inline-flex;
   align-items: center;
   gap: 5px;
@@ -1655,11 +1656,11 @@ ul, ol { list-style: none; }
 .lib-note {
   font-size: 13px;
   line-height: 1.75;
-  color: var(--slate-2);
+  color: var(--muted);
   border-top: 1px solid var(--line);
   padding-top: 18px;
 }
-.lib-note a { color: var(--gold); font-weight: 700; }
+.lib-note a { color: var(--gold-ink); font-weight: 700; }
 .lib-note a:hover { text-decoration: underline; }
 
 .docs-more {
@@ -1669,7 +1670,7 @@ ul, ol { list-style: none; }
   margin-top: 12px;
   font-size: 13px;
   font-weight: 700;
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 .docs-more::after {
   content: "→";
@@ -1677,6 +1678,70 @@ ul, ol { list-style: none; }
 }
 .docs-more:hover::after { transform: translateX(3px); }
 .panel-more { margin: -10px 0 22px; }
+
+
+/* 어두운 배경 위에서는 밝은 시안을 유지한다 (대비 방향이 반대) */
+.hero .eyebrow,
+.process .eyebrow,
+.section-head.light .eyebrow,
+.org-lead small,
+.briefing-cover .briefing-tag,
+.site-footer .eyebrow { color: var(--gold-2); }
+
+/* 최소 터치 영역 24px 확보 (WCAG 2.5.8) */
+.text-link,
+.division-link,
+.docs-more,
+.contact-list a,
+.footer-grid a,
+.footer-top,
+.lib-note a {
+  min-height: 24px;
+  display: inline-flex;
+  align-items: center;
+}
+.footer-grid ul li { margin-bottom: 2px; }
+.contact-list a { padding: 2px 0; }
+
+/* ---------- 문서 목차 (보고서 요약) ---------- */
+.doc-toc {
+  list-style: none;
+  margin: 14px 0 4px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2px;
+}
+.doc-toc li {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 9px 12px;
+  border-radius: 8px;
+}
+.doc-toc li:nth-child(odd) { background: var(--paper); }
+.doc-toc .toc-n {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--gold-ink);
+  min-width: 20px;
+}
+.doc-toc strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.45;
+}
+.doc-toc small {
+  display: block;
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-top: 1px;
+}
 
 /* ---------- Breakpoints ---------- */
 @media (max-width: 767px) {
@@ -1731,6 +1796,7 @@ ul, ol { list-style: none; }
 }
 
 @media (min-width: 768px) {
+  .doc-toc { grid-template-columns: 1fr 1fr; }
   .header-cta { display: inline-flex; }
   .strip-grid { grid-template-columns: 1fr 1fr; }
   .strip article {
