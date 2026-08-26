@@ -213,24 +213,49 @@ ul, ol { list-style: none; }
   margin-left: auto;
 }
 
-.lang-toggle {
-  width: 42px;
-  height: 38px;
-  border-radius: 999px;
+.lang-switch {
+  display: inline-flex;
+  align-items: stretch;
   border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.lang-toggle {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 0;
   background: transparent;
   color: #fff;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.04em;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  transition: background 0.2s, color 0.2s;
+}
+.lang-toggle + .lang-toggle {
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+}
+.lang-toggle.is-active {
+  background: rgba(255, 255, 255, 0.2);
+}
+.site-header.is-scrolled .lang-switch,
+.site-header.is-open .lang-switch {
+  border-color: var(--line);
+  background: var(--white);
 }
 .site-header.is-scrolled .lang-toggle,
 .site-header.is-open .lang-toggle {
-  border-color: var(--line);
-  background: var(--white);
   color: var(--ink);
+}
+.site-header.is-scrolled .lang-toggle + .lang-toggle,
+.site-header.is-open .lang-toggle + .lang-toggle {
+  border-left-color: var(--line);
+}
+.site-header.is-scrolled .lang-toggle.is-active,
+.site-header.is-open .lang-toggle.is-active {
+  background: var(--gold-soft);
+  color: var(--navy);
 }
 
 .header-cta { display: none; }

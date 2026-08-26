@@ -14,6 +14,7 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ko_KR">
   <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="id_ID">
   <meta property="og:url" content="https://han4797-ctrl.github.io/apex/">
   <meta property="og:image" content="https://han4797-ctrl.github.io/apex/assets/hero-port.jpg">
   <meta property="og:image:width" content="1920">
@@ -72,14 +73,14 @@
 
   <header class="site-header" id="header">
     <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="APEX 홈">
+      <a class="brand" href="#top" data-i18n-aria="brand.home" aria-label="APEX 홈">
         <img src="assets/logo.svg" alt="" width="44" height="44">
         <span class="brand-text">
           <strong>APEX</strong>
           <small data-i18n="brand.tag">Intelligent Scenario Solutions</small>
         </span>
       </a>
-      <nav class="nav" id="nav" aria-label="주 메뉴">
+      <nav class="nav" id="nav" data-i18n-aria="nav.main" aria-label="주 메뉴">
         <a href="#about" data-i18n="nav.about">회사소개</a>
         <a href="#products" data-i18n="nav.products">취급품목</a>
         <a href="#profile" data-i18n="nav.briefing">보고서</a>
@@ -89,7 +90,11 @@
         <a href="#contact" data-i18n="nav.contact">문의</a>
       </nav>
       <div class="header-actions">
-        <button class="lang-toggle" id="langToggle" type="button" aria-label="언어 변경" aria-pressed="false">EN</button>
+        <div class="lang-switch" id="langSwitch" role="group" data-i18n-aria="lang.group" aria-label="언어">
+          <button class="lang-toggle is-active" type="button" data-lang="ko" aria-pressed="true" data-i18n-aria="lang.ko">KR</button>
+          <button class="lang-toggle" type="button" data-lang="id" aria-pressed="false" data-i18n-aria="lang.id">ID</button>
+          <button class="lang-toggle" type="button" data-lang="en" aria-pressed="false" data-i18n-aria="lang.en">EN</button>
+        </div>
         <a class="btn btn-sm btn-primary header-cta" href="#contact" data-i18n="nav.inquiry">견적 문의</a>
         <button class="menu-btn" id="menuBtn" type="button" aria-label="메뉴 열기" aria-controls="nav" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -135,7 +140,7 @@
       </div>
     </section>
 
-    <section class="materials" aria-label="취급 품목 미리보기">
+    <section class="materials" data-i18n-aria="materials.label" aria-label="취급 품목 미리보기">
       <a class="material" href="#copper" data-goto="resource">
         <img src="assets/copper-scrap.jpg" alt="구리 스크랩" width="1200" height="900" loading="lazy">
         <span>
@@ -424,7 +429,7 @@
           </p>
         </div>
 
-        <div class="sheet-tabs" role="tablist" aria-label="자원파트 문서">
+        <div class="sheet-tabs" role="tablist" data-i18n-aria="tablist.docs" aria-label="자원파트 문서">
           <button class="sheet-tab is-active" id="tab-profile" type="button" role="tab"
                   aria-selected="true" aria-controls="sheet-profile" data-sheet="profile">
             <span data-i18n="p.doc.profile">자원파트 회사 소개서</span>
@@ -620,7 +625,7 @@
           </p>
         </div>
 
-        <div class="tabs" role="tablist" aria-label="취급 품목 분류">
+        <div class="tabs" role="tablist" data-i18n-aria="tablist.products" aria-label="취급 품목 분류">
           <button class="tab is-active" id="tab-resource" type="button" role="tab"
                   aria-selected="true" aria-controls="panel-resource" data-tab="resource">
             <span data-i18n="tab.resource">자원파트</span>
@@ -1733,22 +1738,22 @@
             <span data-i18n="form.item">관심 품목</span>
             <select name="item" id="itemSelect">
               <optgroup label="자원파트 / Resources" id="optgResource">
-                <option value="구리 스크랩">구리 스크랩 / Copper Scrap</option>
-                <option value="알루미늄 잉곳">알루미늄 잉곳 / Aluminum Ingot</option>
-                <option value="알루미늄 드로스">알루미늄 드로스 / Aluminum Dross</option>
-                <option value="주석 슬래그">주석 슬래그 / Tin Slag</option>
-                <option value="니켈 슬래그">니켈 슬래그 / Nickel Slag</option>
-                <option value="우드펠릿">우드펠릿 / Wood Pellets</option>
-                <option value="카올린">카올린 / Kaolin</option>
+                <option value="구리 스크랩" data-i18n="form.item.copper">구리 스크랩</option>
+                <option value="알루미늄 잉곳" data-i18n="form.item.alu">알루미늄 잉곳</option>
+                <option value="알루미늄 드로스" data-i18n="form.item.dross">알루미늄 드로스</option>
+                <option value="주석 슬래그" data-i18n="form.item.tin">주석 슬래그</option>
+                <option value="니켈 슬래그" data-i18n="form.item.nick">니켈 슬래그</option>
+                <option value="우드펠릿" data-i18n="form.item.wood">우드펠릿</option>
+                <option value="카올린" data-i18n="form.item.kaolin">카올린</option>
               </optgroup>
               <optgroup label="전자파트 / Electronics" id="optgElectronic">
-                <option value="전자칠판">전자칠판 / Interactive Flat Panel</option>
-                <option value="OPS 모듈">OPS 모듈 / OPS PC Module</option>
-                <option value="노트북">노트북 / Laptop</option>
-                <option value="태블릿PC">태블릿PC / Tablet PC</option>
-                <option value="농업용 드론">농업용 드론 / Agricultural Drone</option>
+                <option value="전자칠판" data-i18n="form.item.eboard">전자칠판</option>
+                <option value="OPS 모듈" data-i18n="form.item.ops">OPS 모듈</option>
+                <option value="노트북" data-i18n="form.item.laptop">노트북</option>
+                <option value="태블릿PC" data-i18n="form.item.tablet">태블릿PC</option>
+                <option value="농업용 드론" data-i18n="form.item.drone">농업용 드론</option>
               </optgroup>
-              <option value="기타">기타 / Other</option>
+              <option value="기타" data-i18n="form.item.other">기타</option>
             </select>
           </label>
           <label for="inq-message">
