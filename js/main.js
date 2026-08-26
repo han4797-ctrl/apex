@@ -104,14 +104,14 @@ const i18n = {
     "hero.eyebrow": "APEX Indonesia · with VL Korea",
     "hero.title1": "시나리오를",
     "hero.title2": "실행합니다",
-    "hero.lead": "비철금속·슬래그·드로스·우드펠릿을 다루는 <b>자원파트</b>와 전자칠판·OPS·노트북·태블릿PC·농업용 드론을 공급하는 <b>전자파트</b>. 전면은 <b>APEX</b>입니다. 인도네시아 현지는 APEX가 실행하고, 한국에서 진행하는 모든 업무는 동등 파트너 <b>VL M&C</b>가 총괄합니다.",
+    "hero.lead": "비철금속·슬래그·드로스·우드펠릿·카올린을 다루는 <b>자원파트</b>와 전자칠판·OPS·노트북·태블릿PC·농업용 드론을 공급하는 <b>전자파트</b>. 전면은 <b>APEX</b>입니다. 인도네시아 현지는 APEX가 실행하고, 한국에서 진행하는 모든 업무는 동등 파트너 <b>VL M&C</b>가 총괄합니다.",
     "hero.cta1": "취급 품목 보기",
     "hero.cta2": "견적 상담",
     "hero.s1": "자원파트 · 전자파트",
     "hero.s2": "APEX 탄게랑",
     "hero.s3": "VL 한국 총괄",
     "strip.1t": "자원파트",
-    "strip.1p": "비철금속 · 제련 슬래그 · 드로스 · 우드펠릿",
+    "strip.1p": "비철금속 · 제련 슬래그 · 드로스 · 우드펠릿 · 카올린",
     "strip.2t": "전자파트",
     "strip.2p": "전자칠판 · OPS · 노트북 · 태블릿PC · 드론",
     "strip.3t": "APEX 인도네시아",
@@ -154,7 +154,7 @@ const i18n = {
     "org.res.en": "Resources",
     "org.res.t": "자원파트",
     "org.res.1": "비철금속 소싱",
-    "org.res.2": "슬래그 · 드로스 · 우드펠릿",
+    "org.res.2": "슬래그 · 드로스 · 우드펠릿 · 카올린",
     "org.res.3": "다르에스살람 · 자카르타",
     "org.ops.en": "Operations",
     "org.ops.t": "이원 운영",
@@ -168,7 +168,7 @@ const i18n = {
     "org.ele.3": "선전 소싱 · 설치",
     "prof.tag": "Company Profile · Resources Division",
     "prof.cover.title": "시나리오를 실행합니다",
-    "prof.lead": "전면 브랜드 APEX가 인도네시아 탄게랑에서 현지 실행하고, 한국 업무는 동등 파트너 VL M&C가 총괄합니다. 비철금속 스크랩, 제련 슬래그, 알루미늄 드로스, 산업용 우드펠릿을 규격·품질·물류와 함께 맞춥니다.",
+    "prof.lead": "전면 브랜드 APEX가 인도네시아 탄게랑에서 현지 실행하고, 한국 업무는 동등 파트너 VL M&C가 총괄합니다. 비철금속 스크랩, 제련 슬래그, 알루미늄 드로스, 산업용 우드펠릿, 카올린을 규격·품질·물류와 함께 맞춥니다.",
     "prof.meta": "2026 · 바이어·파트너 배포용 · Tangerang · Incheon · Dar es Salaam · Jakarta",
     "prof.download": "PDF로 저장",
     "prof.about.kicker": "About",
@@ -189,7 +189,7 @@ const i18n = {
     "prof.disc": "본 소개서는 일반 안내입니다. 가격·재고·선적 일정은 문의 시점의 오퍼와 검사 결과에 따릅니다. 품목별 수출입 인허가는 계약 전 관세사 및 현지 규정으로 확인합니다.",
     "div.res.en": "Resources Division",
     "div.res.t": "자원파트",
-    "div.res.d": "구리 스크랩 · 알루미늄 잉곳 · 알루미늄 드로스 · 주석/니켈 슬래그 · 우드펠릿",
+    "div.res.d": "구리 스크랩 · 알루미늄 잉곳 · 알루미늄 드로스 · 주석/니켈 슬래그 · 우드펠릿 · 카올린",
     "div.res.a": "자원 품목 보기",
     "div.ele.en": "Electronics Division",
     "div.ele.t": "전자파트",
@@ -229,7 +229,7 @@ const i18n = {
     "tab.resource.sub": "Resources",
     "tab.electronic": "전자파트",
     "tab.electronic.sub": "Electronics",
-    "panel.res.lead": "금속 원료부터 제련 부산물·드로스, 친환경 연료까지. 산업 현장에서 바로 쓰이는 자원을 공급합니다.",
+    "panel.res.lead": "금속 원료부터 제련 부산물·드로스, 친환경 연료, 산업용 고령토까지. 산업 현장에서 바로 쓰이는 자원을 공급합니다.",
     "panel.ele.lead": "전자칠판과 OPS 모듈, 노트북, 태블릿PC, 농업용 드론을 교육기관·관공서·농장·기업에 공급합니다. 핵심 사양은 디지털 쇼룸에서 확인하고, 카탈로그·기술 명세서를 내려받은 뒤 샘플을 요청할 수 있습니다.",
     "p.copper.t": "구리 스크랩",
     "p.copper.d": "전선·밀베리·버치 등 국제 통용 등급의 구리 스크랩을 취급합니다. 전기·건설·제조 현장의 핵심 비철 원료입니다.",
@@ -255,6 +255,37 @@ const i18n = {
     "p.wood.d": "산업용 보일러와 발전에 쓰이는 바이오매스 연료입니다. 함수율·발열량·규격을 기준으로 안정 공급합니다.",
     "p.wood.1": "산업·발전용 고형 연료",
     "p.wood.2": "신재생 에너지 원료",
+    "p.kaolin.t": "카올린",
+    "p.kaolin.d": "인도네시아 벨리퉁에서 나오는 산업용 고령토입니다. 도자기·제지·페인트 원료로, 누들·괴상·분체를 백색도와 알루미나 함량 기준으로 맞춰 한국 수요처에 공급합니다.",
+    "p.kaolin.showroom": "대표 규격",
+    "p.kaolin.badge.al": "Al₂O₃",
+    "p.kaolin.badge.bright": "백색도",
+    "p.kaolin.badge.origin": "벨리퉁",
+    "p.kaolin.badge.form": "공급 형태",
+    "p.kaolin.spec.origin.l": "산지",
+    "p.kaolin.spec.origin.v": "인도네시아 벨리퉁",
+    "p.kaolin.spec.form.l": "형태",
+    "p.kaolin.spec.form.v": "누들 · 괴상 · 분체",
+    "p.kaolin.spec.al.l": "Al₂O₃",
+    "p.kaolin.spec.si.l": "SiO₂",
+    "p.kaolin.spec.fe.l": "Fe₂O₃",
+    "p.kaolin.spec.bright.l": "백색도",
+    "p.kaolin.spec.moi.l": "수분",
+    "p.kaolin.spec.port.l": "선적항",
+    "p.kaolin.spec.port.v": "탄중바투",
+    "p.kaolin.note": "대표 시료 기준입니다. 계약 물량은 선적 전 검사 결과에 따릅니다.",
+    "p.kaolin.1": "도자기 · 제지 · 페인트 원료",
+    "p.kaolin.2": "누들 · 괴상 · 분체 공급",
+    "p.kaolin.3": "벨리퉁 소싱 · 탄중바투 선적",
+    "p.kaolin.gallery": "카올린 현장 사진",
+    "p.kaolin.thumb.noodle": "누들 원료 보기",
+    "p.kaolin.thumb.lump": "괴상 원광 보기",
+    "p.kaolin.thumb.powder": "분체 보기",
+    "p.kaolin.thumb.mine": "채굴 현장 보기",
+    "p.kaolin.alt.noodle": "카올린 누들 원료",
+    "p.kaolin.alt.lump": "카올린 괴상 원광",
+    "p.kaolin.alt.powder": "카올린 분체",
+    "p.kaolin.alt.mine": "카올린 노천 채굴 현장",
     "p.eboard.t": "전자칠판",
     "p.eboard.d": "강의실·회의실용 터치 디스플레이를 공급합니다. 86인치 4K UHD, 40포인트 멀티터치, EDLA 인증 환경을 기준으로 화면 크기와 설치 조건을 맞춰 제안합니다.",
     "p.eboard.showroom": "Digital Showroom",
@@ -334,7 +365,7 @@ const i18n = {
     "brief.cover.title": "자원과 현장을 연결하는 공급 브리핑",
     "brief.cover.meta": "APEX-RES-BRIEF · Rev. 2026.08 · 바이어·파트너 배포용",
     "brief.download": "보고서 PDF",
-    "brief.intro": "구리 스크랩, 알루미늄 잉곳, 알루미늄 드로스, 주석·니켈 슬래그, 우드펠릿을 탄자니아·인도네시아에서 소싱합니다. 인도네시아 현지는 APEX가, 한국 업무는 VL이 총괄합니다. 가격·재고는 문의 시점의 오퍼와 검사 결과에 따릅니다.",
+    "brief.intro": "구리 스크랩, 알루미늄 잉곳, 알루미늄 드로스, 주석·니켈 슬래그, 우드펠릿, 카올린을 탄자니아·인도네시아에서 소싱합니다. 인도네시아 현지는 APEX가, 한국 업무는 VL이 총괄합니다. 가격·재고는 문의 시점의 오퍼와 검사 결과에 따릅니다.",
     "brief.s1": "취급 품목",
     "brief.s2": "자원 소싱 거점",
     "brief.s3": "APEX · VL 이원 운영",
@@ -489,14 +520,14 @@ const i18n = {
     "hero.eyebrow": "APEX Indonesia · with VL Korea",
     "hero.title1": "Intelligent scenarios",
     "hero.title2": "made real",
-    "hero.lead": "A <b>Resources Division</b> for non-ferrous scrap, smelting slag, aluminum dross, and wood pellets, and an <b>Electronics Division</b> for interactive displays, OPS, laptops, tablets, and agricultural drones. <b>APEX</b> is the public-facing brand. APEX executes in Indonesia; equal partner <b>VL M&C</b> oversees all Korea-side work.",
+    "hero.lead": "A <b>Resources Division</b> for non-ferrous scrap, smelting slag, aluminum dross, wood pellets, and kaolin, and an <b>Electronics Division</b> for interactive displays, OPS, laptops, tablets, and agricultural drones. <b>APEX</b> is the public-facing brand. APEX executes in Indonesia; equal partner <b>VL M&C</b> oversees all Korea-side work.",
     "hero.cta1": "View products",
     "hero.cta2": "Talk to us",
     "hero.s1": "Resources · Electronics",
     "hero.s2": "APEX Tangerang",
     "hero.s3": "VL Korea desk",
     "strip.1t": "Resources",
-    "strip.1p": "Non-ferrous · Slag · Dross · Wood pellets",
+    "strip.1p": "Non-ferrous · Slag · Dross · Wood pellets · Kaolin",
     "strip.2t": "Electronics",
     "strip.2p": "Displays · OPS · Laptops · Tablets · Drones",
     "strip.3t": "APEX Indonesia",
@@ -539,7 +570,7 @@ const i18n = {
     "org.res.en": "Resources",
     "org.res.t": "Resources Division",
     "org.res.1": "Non-ferrous sourcing",
-    "org.res.2": "Slag · dross · wood pellets",
+    "org.res.2": "Slag · dross · wood pellets · kaolin",
     "org.res.3": "Dar es Salaam · Jakarta",
     "org.ops.en": "Operations",
     "org.ops.t": "Two-desk operations",
@@ -553,7 +584,7 @@ const i18n = {
     "org.ele.3": "Shenzhen sourcing · install",
     "prof.tag": "Company Profile · Resources Division",
     "prof.cover.title": "Intelligent scenarios, made real",
-    "prof.lead": "APEX is the public-facing brand executing in Tangerang, Indonesia. Equal partner VL M&C oversees all Korea-side work. We match grade, quality, and logistics for non-ferrous scrap, smelting slag, aluminum dross, and industrial wood pellets.",
+    "prof.lead": "APEX is the public-facing brand executing in Tangerang, Indonesia. Equal partner VL M&C oversees all Korea-side work. We match grade, quality, and logistics for non-ferrous scrap, smelting slag, aluminum dross, industrial wood pellets, and kaolin.",
     "prof.meta": "2026 · For buyers and partners · Tangerang · Incheon · Dar es Salaam · Jakarta",
     "prof.download": "Save PDF",
     "prof.about.kicker": "About",
@@ -572,9 +603,9 @@ const i18n = {
     "prof.field.scopev": "Resources · Electronics / B2B sourcing, inspection, import/export, delivery",
     "prof.field.items": "Resources we handle",
     "prof.disc": "This profile is general guidance. Price, stock, and shipment timing follow the offer and inspection at inquiry. Import/export permits are confirmed with a customs broker and local rules before contract.",
-    "div.res.en": "Metals · Slag · Biomass",
+    "div.res.en": "Metals · Slag · Biomass · Kaolin",
     "div.res.t": "Resources Division",
-    "div.res.d": "Copper scrap · Aluminum ingot · Aluminum dross · Tin/Nickel slag · Wood pellets",
+    "div.res.d": "Copper scrap · Aluminum ingot · Aluminum dross · Tin/Nickel slag · Wood pellets · Kaolin",
     "div.res.a": "View resource items",
     "div.ele.en": "Displays · PCs · Drones",
     "div.ele.t": "Electronics Division",
@@ -611,10 +642,10 @@ const i18n = {
     "network.legend.korea": "VL Korea",
     "network.hub": "APEX",
     "tab.resource": "Resources",
-    "tab.resource.sub": "Metals · Slag · Dross · Biomass",
+    "tab.resource.sub": "Metals · Slag · Dross · Biomass · Kaolin",
     "tab.electronic": "Electronics",
     "tab.electronic.sub": "Displays · PCs · Drones",
-    "panel.res.lead": "From metal feedstock and smelting by-products — including aluminum dross — to cleaner fuel, we supply materials that plants can use right away.",
+    "panel.res.lead": "From metal feedstock and smelting by-products — including aluminum dross — to cleaner fuel and industrial kaolin, we supply materials that plants can use right away.",
     "panel.ele.lead": "Interactive flat panels, OPS modules, laptops, tablets, and agricultural drones for schools, public offices, farms, and companies. Review key specs in the digital showroom, download the catalog and spec sheet, then request a sample.",
     "p.copper.t": "Copper scrap",
     "p.copper.d": "We handle internationally graded copper scrap such as wire, millberry, and birch—core feedstock for electrical, construction, and manufacturing.",
@@ -640,6 +671,37 @@ const i18n = {
     "p.wood.d": "Biomass fuel for industrial boilers and power generation, supplied against moisture, calorific value, and size specs.",
     "p.wood.1": "Industrial and power fuel",
     "p.wood.2": "Renewable energy feedstock",
+    "p.kaolin.t": "Kaolin",
+    "p.kaolin.d": "Industrial kaolin from Belitung, Indonesia. We match noodle, lump, and powder grades to brightness and alumina for ceramic, paper, and paint buyers in Korea and the region.",
+    "p.kaolin.showroom": "Typical spec",
+    "p.kaolin.badge.al": "Al₂O₃",
+    "p.kaolin.badge.bright": "Brightness",
+    "p.kaolin.badge.origin": "Belitung",
+    "p.kaolin.badge.form": "Supply form",
+    "p.kaolin.spec.origin.l": "Origin",
+    "p.kaolin.spec.origin.v": "Belitung, Indonesia",
+    "p.kaolin.spec.form.l": "Form",
+    "p.kaolin.spec.form.v": "Noodle · lump · powder",
+    "p.kaolin.spec.al.l": "Al₂O₃",
+    "p.kaolin.spec.si.l": "SiO₂",
+    "p.kaolin.spec.fe.l": "Fe₂O₃",
+    "p.kaolin.spec.bright.l": "Brightness",
+    "p.kaolin.spec.moi.l": "Moisture",
+    "p.kaolin.spec.port.l": "Loading port",
+    "p.kaolin.spec.port.v": "Tanjung Batu",
+    "p.kaolin.note": "Figures are from a typical sample. Contract tonnage follows pre-shipment inspection.",
+    "p.kaolin.1": "Ceramic · paper · paint feedstock",
+    "p.kaolin.2": "Noodle · lump · powder supply",
+    "p.kaolin.3": "Belitung sourcing · Tanjung Batu loading",
+    "p.kaolin.gallery": "Kaolin field photos",
+    "p.kaolin.thumb.noodle": "View noodle grade",
+    "p.kaolin.thumb.lump": "View lump ore",
+    "p.kaolin.thumb.powder": "View powder",
+    "p.kaolin.thumb.mine": "View open-pit mine",
+    "p.kaolin.alt.noodle": "Kaolin noodle feedstock",
+    "p.kaolin.alt.lump": "Kaolin lump ore",
+    "p.kaolin.alt.powder": "Kaolin powder",
+    "p.kaolin.alt.mine": "Kaolin open-pit mine",
     "p.eboard.t": "Interactive flat panel",
     "p.eboard.d": "Touch displays for classrooms and meeting rooms. We propose around an 86-inch 4K UHD, 40-point multi-touch, EDLA-certified platform, matching screen size and install conditions.",
     "p.eboard.showroom": "Digital Showroom",
@@ -719,7 +781,7 @@ const i18n = {
     "brief.cover.title": "A supply brief that connects resources to the field",
     "brief.cover.meta": "APEX-RES-BRIEF · Rev. 2026.08 · For buyers and partners",
     "brief.download": "Download PDF",
-    "brief.intro": "We source copper scrap, aluminum ingot, aluminum dross, tin and nickel slag, and wood pellets from Tanzania and Indonesia. APEX executes in Indonesia; VL oversees Korea. Price and stock follow the offer and inspection at inquiry.",
+    "brief.intro": "We source copper scrap, aluminum ingot, aluminum dross, tin and nickel slag, wood pellets, and kaolin from Tanzania and Indonesia. APEX executes in Indonesia; VL oversees Korea. Price and stock follow the offer and inspection at inquiry.",
     "brief.s1": "Items we handle",
     "brief.s2": "Resource sourcing hubs",
     "brief.s3": "APEX · VL two desks",
@@ -796,6 +858,7 @@ const itemPart = {
   tin: "resource",
   nickel: "resource",
   wood: "resource",
+  kaolin: "resource",
   eboard: "electronic",
   ops: "electronic",
   laptop: "electronic",
@@ -1069,6 +1132,13 @@ function applyLang(next) {
     if (value) el.setAttribute("aria-label", value);
   });
 
+  document.querySelectorAll("[data-gallery]").forEach((gallery) => {
+    const active = gallery.querySelector("[data-gallery-src].is-active");
+    const main = gallery.querySelector("[data-gallery-main]");
+    const key = active?.getAttribute("data-i18n-gallery-alt");
+    if (main && key && copy[key]) main.setAttribute("alt", copy[key]);
+  });
+
   const optRes = document.getElementById("optgResource");
   const optEle = document.getElementById("optgElectronic");
   if (optRes && copy["form.optRes"]) optRes.label = copy["form.optRes"];
@@ -1128,6 +1198,22 @@ form.addEventListener("submit", (event) => {
   const subject = encodeURIComponent(fillTemplate(copy["form.mail.subject"], { item }));
   const body = encodeURIComponent(fillTemplate(copy["form.mail.body"], { name, contact, item, message }));
   window.location.href = `mailto:${INQUIRY_MAIL}?subject=${subject}&body=${body}`;
+});
+
+document.querySelectorAll("[data-gallery]").forEach((gallery) => {
+  const main = gallery.querySelector("[data-gallery-main]");
+  gallery.querySelectorAll("[data-gallery-src]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (!main) return;
+      main.src = btn.getAttribute("data-gallery-src");
+      const key = btn.getAttribute("data-i18n-gallery-alt");
+      const alt = key ? dict()[key] : "";
+      if (alt) main.setAttribute("alt", alt);
+      gallery.querySelectorAll("[data-gallery-src]").forEach((other) => {
+        other.classList.toggle("is-active", other === btn);
+      });
+    });
+  });
 });
 
 document.querySelectorAll("[data-item]").forEach((btn) => {
