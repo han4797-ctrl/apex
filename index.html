@@ -2149,6 +2149,22 @@
     </div>
   </footer>
 
+  <aside class="bgm" id="bgm">
+    <audio id="bgmAudio" src="assets/audio/crusade.mp3" loop preload="none" playsinline></audio>
+    <button class="bgm-btn" id="bgmToggle" type="button" aria-pressed="false" aria-label="배경음악 재생">
+      <svg class="bgm-play" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+        <path fill="currentColor" d="M8 5.5v13l11-6.5L8 5.5z"/>
+      </svg>
+      <svg class="bgm-pause" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+        <path fill="currentColor" d="M7 5h4v14H7V5zm6 0h4v14h-4V5z"/>
+      </svg>
+    </button>
+    <p class="bgm-meta">
+      <strong data-i18n="bgm.title">배경음악</strong>
+      <small data-i18n="bgm.credit">Crusade · Kevin MacLeod (CC BY)</small>
+    </p>
+  </aside>
+
   <script src="js/main.js"></script>
 </body>
 </html>

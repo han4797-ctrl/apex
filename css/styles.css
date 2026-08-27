@@ -1951,6 +1951,62 @@ ul, ol { list-style: none; }
 .form-note { font-size: 13px; color: var(--muted); font-weight: 400; }
 .form-note.is-error { color: #8b3a42; }
 
+/* ---------- Background music ---------- */
+.bgm {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 36;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: min(280px, calc(100vw - 32px));
+  padding: 8px 14px 8px 8px;
+  border-radius: 999px;
+  background: rgba(11, 39, 64, 0.94);
+  color: #f4efe6;
+  box-shadow: 0 12px 32px rgba(11, 39, 64, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.bgm-btn {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--gold);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.bgm-btn:hover { background: var(--gold-2); }
+.bgm-pause { display: none; }
+.bgm.is-playing .bgm-play { display: none; }
+.bgm.is-playing .bgm-pause { display: block; }
+.bgm:not(.is-playing) .bgm-btn {
+  animation: bgmPulse 2.4s ease-in-out infinite;
+}
+@keyframes bgmPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(47, 158, 216, 0.45); }
+  70% { box-shadow: 0 0 0 10px rgba(47, 158, 216, 0); }
+}
+.bgm-meta {
+  min-width: 0;
+  line-height: 1.25;
+}
+.bgm-meta strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+}
+.bgm-meta small {
+  display: block;
+  margin-top: 2px;
+  font-size: 10px;
+  color: rgba(244, 239, 230, 0.72);
+}
+
 /* ---------- Footer / FAB ---------- */
 .site-footer {
   background: var(--navy);
@@ -2251,6 +2307,8 @@ ul, ol { list-style: none; }
 /* ---------- Breakpoints ---------- */
 @media (max-width: 599px) {
   .brand-text small { display: none; }
+  .bgm-meta { display: none; }
+  .bgm { padding: 8px; }
 }
 
 @media (max-width: 767px) {
@@ -2521,4 +2579,5 @@ ul, ol { list-style: none; }
   .btn { transition: none; }
   .track-progress span { transition: none; }
   .track-samples.is-hint .track-chip { animation: none; }
+  .bgm:not(.is-playing) .bgm-btn { animation: none; }
 }

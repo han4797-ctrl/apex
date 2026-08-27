@@ -629,7 +629,11 @@ const i18n = {
     "footer.blurb": "전면은 APEX, 한국 업무는 동등 파트너 VL M&C가 총괄합니다. 자원 트레이딩과 전자기기 솔루션을 함께 운영합니다.",
     "footer.explore": "바로가기",
     "footer.contact": "연락처",
-    "footer.top": "맨 위로"
+    "footer.top": "맨 위로",
+    "bgm.play": "배경음악 재생",
+    "bgm.pause": "배경음악 끄기",
+    "bgm.title": "배경음악",
+    "bgm.credit": "Crusade · Kevin MacLeod (CC BY)"
   },
   en: {
     skip: "Skip to content",
@@ -1258,7 +1262,11 @@ const i18n = {
     "footer.blurb": "APEX is the public-facing brand. Equal partner VL M&C oversees all Korea-side work. Resources and electronics run together.",
     "footer.explore": "Explore",
     "footer.contact": "Contact",
-    "footer.top": "Back to top"
+    "footer.top": "Back to top",
+    "bgm.play": "Play background music",
+    "bgm.pause": "Stop background music",
+    "bgm.title": "Background music",
+    "bgm.credit": "Crusade · Kevin MacLeod (CC BY)"
   },
   id: {
     skip: "Lewati ke isi",
@@ -1887,7 +1895,11 @@ const i18n = {
     "footer.blurb": "APEX adalah merek depan. Mitra setara VL M&amp;C mengawasi seluruh pekerjaan sisi Korea. Sumber daya dan elektronik dijalankan bersama.",
     "footer.explore": "Jelajahi",
     "footer.contact": "Kontak",
-    "footer.top": "Kembali ke atas"
+    "footer.top": "Kembali ke atas",
+    "bgm.play": "Putar musik latar",
+    "bgm.pause": "Hentikan musik latar",
+    "bgm.title": "Musik latar",
+    "bgm.credit": "Crusade · Kevin MacLeod (CC BY)"
   }
 };
 
@@ -2222,6 +2234,7 @@ function applyLang(next) {
     const value = copy[el.getAttribute("data-i18n-aria")];
     if (value) el.setAttribute("aria-label", value);
   });
+  refreshBgmLabel(copy);
 
   document.querySelectorAll("[data-gallery]").forEach((gallery) => {
     const active = gallery.querySelector("[data-gallery-src].is-active");
@@ -2574,3 +2587,65 @@ document.querySelectorAll("[data-item]").forEach((btn) => {
     form.elements.namedItem("name")?.focus();
   });
 });
+
+/* ---------- Background music ---------- */
+const BGM_KEY = "apex-bgm";
+
+function bgmEls() {
+  return {
+    audio: document.getElementById("bgmAudio"),
+    toggle: document.getElementById("bgmToggle"),
+    root: document.getElementById("bgm")
+  };
+}
+
+function bgmIsPlaying() {
+  const { audio } = bgmEls();
+  return Boolean(audio && !audio.paused);
+}
+
+function refreshBgmLabel(copy) {
+  const { audio, toggle, root } = bgmEls();
+  if (!toggle) return;
+  const dictCopy = copy || dict();
+  const playing = Boolean(audio && !audio.paused);
+  toggle.setAttribute("aria-pressed", String(playing));
+  toggle.setAttribute("aria-label", dictCopy[playing ? "bgm.pause" : "bgm.play"] || "");
+  root?.classList.toggle("is-playing", playing);
+}
+
+async function startBgm() {
+  const { audio } = bgmEls();
+  if (!audio) return false;
+  audio.volume = 0.32;
+  try {
+    await audio.play();
+    localStorage.setItem(BGM_KEY, "on");
+    refreshBgmLabel();
+    return true;
+  } catch {
+    refreshBgmLabel();
+    return false;
+  }
+}
+
+function stopBgm() {
+  bgmEls().audio?.pause();
+  localStorage.setItem(BGM_KEY, "off");
+  refreshBgmLabel();
+}
+
+(function initBgm() {
+  const { audio, toggle } = bgmEls();
+  toggle?.addEventListener("click", () => {
+    if (bgmIsPlaying()) stopBgm();
+    else startBgm();
+  });
+  audio?.addEventListener("pause", () => refreshBgmLabel());
+  audio?.addEventListener("play", () => refreshBgmLabel());
+  if (localStorage.getItem(BGM_KEY) === "on" && !reduceMotion) {
+    startBgm();
+  } else {
+    refreshBgmLabel();
+  }
+})();
