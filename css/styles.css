@@ -808,6 +808,38 @@ ul, ol { list-style: none; }
   color: var(--muted);
   font-size: 15px;
 }
+.showroom-hall {
+  background: var(--navy);
+  color: #f4efe6;
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  margin: -4px 0 24px;
+  box-shadow: var(--shadow);
+}
+.showroom-hall-kicker {
+  font-family: Outfit, Georgia, serif;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-2);
+  margin-bottom: 8px;
+}
+.showroom-hall h3 {
+  font-size: 26px;
+  margin-bottom: 8px;
+  color: #f4efe6;
+}
+.showroom-hall p {
+  max-width: 64ch;
+  color: rgba(244, 239, 230, 0.82);
+  font-size: 15px;
+  line-height: 1.7;
+}
+.contact-docs {
+  margin-top: 10px;
+  font-weight: 700;
+  color: var(--navy);
+}
 
 .product-grid {
   display: grid;
@@ -1730,9 +1762,14 @@ ul, ol { list-style: none; }
   align-items: center;
   gap: 6px;
   margin-top: 12px;
+  padding: 0;
+  border: 0;
+  background: none;
   font-size: 13px;
   font-weight: 700;
   color: var(--gold-ink);
+  cursor: pointer;
+  text-align: left;
 }
 .docs-more::after {
   content: "→";
