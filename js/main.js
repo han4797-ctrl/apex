@@ -11,9 +11,10 @@ const i18n = {
     "nav.network": "글로벌 네트워크",
     "prof.sec.eyebrow": "Reports",
     "prof.sec.title": "배포용 보고서",
-    "prof.sec.lead": "바이어·파트너에게 그대로 보낼 수 있는 두 가지 문서입니다. 여기서는 핵심만 보여 드리고, 전체 내용은 문의 후 보내 드립니다.",
+    "prof.sec.lead": "바이어용 소개서·브리핑과, 제조사에 바로 보낼 1페이지 파트너 브리프를 따로 두었습니다. 제조사 브리프는 한 장 전체를 여기서 보고 PDF로 내려받을 수 있습니다.",
     "prof.tab.kind": "요약 · 6p PDF",
     "brief.tab.kind": "요약 · 4p PDF",
+    "mfr.tab.kind": "전문 · 1p PDF",
     "prof.toc.kicker": "Contents",
     "prof.toc.t": "PDF 문서 구성 · 6페이지",
     "prof.toc.lead": "조직도·품목 상세·소싱 거점·거래 프로세스는 아래 페이지들에서 더 자세히 다룹니다. 인쇄해서 그대로 전달하셔도 됩니다.",
@@ -225,7 +226,33 @@ const i18n = {
     "network.korea.tag": "VL M&C",
     "network.legend.korea": "VL 한국",
     "network.hub": "APEX",
-    "tab.resource": "자원파트",
+    "track.badge": "시연 · Demo",
+    "track.title": "선적 추적",
+    "track.lead": "샘플 B/L 번호를 넣으면 가상 항로가 지도에 표시됩니다. 실제 선사 추적과 연결되어 있지 않습니다.",
+    "track.label": "B/L 번호",
+    "track.ph": "APEX-DAR-2608-001",
+    "track.go": "추적",
+    "track.samples": "샘플 번호",
+    "track.note": "본 기능은 홈페이지 시연용입니다. 실제 컨테이너 위치·ETA는 계약 후 선사·포워더 자료로 안내합니다.",
+    "track.unknown": "이 번호는 데모 샘플이 아닙니다. 아래 샘플 B/L을 눌러 보세요.",
+    "track.hud.bl": "B/L",
+    "track.hud.vessel": "선박",
+    "track.hud.cargo": "화물",
+    "track.hud.route": "구간",
+    "track.status.search": "조회 중",
+    "track.status.depart": "출항",
+    "track.status.transit": "해상 운송 중",
+    "track.status.arrive": "입항",
+    "track.status.done": "도착",
+    "track.cargo.cu": "구리 스크랩",
+    "track.cargo.wood": "우드펠릿",
+    "track.cargo.ifp": "전자칠판",
+    "track.vessel.dar": "MV APEX DARWIN",
+    "track.vessel.jkt": "MV APEX JAVA",
+    "track.vessel.szx": "MV APEX PEARL",
+    "track.route.dar": "다르에스살람 → 자카르타 → 인천",
+    "track.route.jkt": "자카르타 → 인천",
+    "track.route.szx": "선전 → 인천",
     "tab.resource.sub": "Resources",
     "tab.electronic": "전자파트",
     "tab.electronic.sub": "Electronics",
@@ -404,6 +431,7 @@ const i18n = {
     "p.resource.kicker": "B2B 자료실",
     "p.doc.profile": "자원파트 회사 소개서",
     "p.doc.brief": "자원무역 브리핑",
+    "p.doc.mfr": "제조사 파트너 브리프",
     "p.doc.catalog": "팩토리 제품 카탈로그",
     "p.doc.spec": "기술 명세서",
     "p.doc.brochure75": "75인치 브로슈어",
@@ -465,6 +493,50 @@ const i18n = {
     "brief.wood.t": "우드펠릿",
     "brief.wood.p": "2025년 한국 수입 약 392.9만 톤. 인도네시아산은 약 90만 톤(23%)으로 주요 원산지입니다. 함수율·발열량·회분을 계약 조건으로 맞춥니다.",
     "brief.disclaimer": "공개 브리핑이며 내부 거래 상대·계약 단가는 포함하지 않습니다. 회사 소개서와 함께 전달해도 됩니다.",
+    "mfr.tag": "Manufacturer Partner Brief · Electronics &amp; Resources",
+    "mfr.cover.title": "인도네시아와 한국의 현지 파트너",
+    "mfr.cover.meta": "APEX-MFR-BRIEF · Rev. 2026.08 · 제조사 배포용 · 1페이지",
+    "mfr.download": "영·중 PDF",
+    "mfr.download.ko": "한글 PDF",
+    "mfr.lead": "APEX는 인도네시아 현지 실행을 맡는 전면 브랜드입니다. 한국 업무는 동등 파트너 VL M&amp;C가 총괄합니다. 이 한 장은 전자 제조사와 자원 생산 파트너에게, 견적 전에 협업 구조를 전달하기 위한 자료입니다.",
+    "mfr.s1": "자원 취급 품목",
+    "mfr.s2": "전자 취급 품목",
+    "mfr.s3": "인도네시아 · 한국",
+    "mfr.s4": "선적 전 검사",
+    "mfr.who.t": "이원 실행",
+    "mfr.apex.p": "탄게랑. 현지 소싱·검수·납품을 실행하는 대외 전면 브랜드입니다.",
+    "mfr.vl.p": "인천. 한국에서 진행하는 모든 업무 — 창구·통관·납품 — 을 총괄합니다.",
+    "mfr.range.t": "취급 범위",
+    "mfr.range.res.t": "자원파트",
+    "mfr.range.res.p": "구리 스크랩 · 알루미늄 잉곳 · 알루미늄 드로스 · 주석/니켈 슬래그 · 우드펠릿 · 카올린",
+    "mfr.range.ele.t": "전자파트",
+    "mfr.range.ele.p": "전자칠판 65/75/86인치 · OPS 모듈 · 노트북 · 태블릿PC · 농업용 드론 30/40/50 L",
+    "mfr.how.t": "협업 순서",
+    "mfr.how.1t": "사양 확정",
+    "mfr.how.1p": "등급·성분 또는 BOM을 발주 전에 고정합니다.",
+    "mfr.how.2t": "샘플 · 검수",
+    "mfr.how.2p": "승인 샘플 또는 지정 검사기관으로 확인합니다.",
+    "mfr.how.3t": "시험 선적",
+    "mfr.how.3p": "첫 물량으로 품질을 확인한 뒤 확대합니다.",
+    "mfr.how.4t": "반복 공급",
+    "mfr.how.4p": "선적 일정·포장·사후를 계약에 남깁니다.",
+    "mfr.ask.t": "제조사에 요청하는 것  /  우리가 맡는 것",
+    "mfr.need.t": "제조사에 요청하는 것",
+    "mfr.need.1": "승인 샘플·성적서와 동일한 확정 사양",
+    "mfr.need.2": "월 생산능력과 납기",
+    "mfr.need.3": "선적 전 검사(PSI) 또는 지정 검사 입회",
+    "mfr.need.4": "수출 포장·서류, PI에 Incoterms 명시",
+    "mfr.need.5": "전자는 보증·부품, 자원은 정산 기준",
+    "mfr.give.t": "우리가 맡는 것",
+    "mfr.give.1": "인도네시아 현지 실행 (APEX 탄게랑)",
+    "mfr.give.2": "한국 창구·통관·납품 (VL 인천)",
+    "mfr.give.3": "규격 확정 후에만 발주",
+    "mfr.give.4": "시험 선적 후 반복 물량",
+    "mfr.give.5": "대금은 법인 계좌로만 수수",
+    "mfr.next.t": "다음 단계",
+    "mfr.next.p": "품목·확정 사양·월 생산능력·초도 물량을 보내 주시면, 사양 확정 시트로 회신합니다.",
+    "mfr.contact.t": "문의",
+    "mfr.disc": "일반 안내입니다. 가격·재고·선적 일정은 문의 시점의 오퍼에 따릅니다. 내부 거래 상대와 계약 단가는 넣지 않았습니다. 바이어용 소개서·브리핑과 별도로 제조사에 보내 주세요.",
     "process.eyebrow": "How We Work",
     "process.title": "견적부터 인도까지",
     "process.1t": "수요 파악",
@@ -509,7 +581,7 @@ const i18n = {
     "nav.main": "주 메뉴",
     "materials.label": "취급 품목 미리보기",
     "tablist.products": "취급 품목 분류",
-    "tablist.docs": "자원파트 문서",
+    "tablist.docs": "배포용 문서",
     "lang.group": "언어",
     "lang.ko": "한국어",
     "lang.id": "Bahasa Indonesia",
@@ -528,6 +600,7 @@ const i18n = {
     "form.item.drone": "농업용 드론",
     "form.item.profile": "자원파트 회사 소개서",
     "form.item.brief": "자원무역 브리핑",
+    "form.item.mfr": "제조사 파트너 브리프",
     "form.item.resdocs": "자원파트 문서",
     "form.item.other": "기타",
     "footer.blurb": "전면은 APEX, 한국 업무는 동등 파트너 VL M&C가 총괄합니다. 자원 트레이딩과 전자기기 솔루션을 함께 운영합니다.",
@@ -544,9 +617,10 @@ const i18n = {
     "nav.network": "Global Network",
     "prof.sec.eyebrow": "Reports",
     "prof.sec.title": "Documents to share",
-    "prof.sec.lead": "Two documents you can forward to buyers and partners as they are. The essentials are here; request the full text by inquiry.",
+    "prof.sec.lead": "A company profile and trade briefing for buyers, plus a separate one-page partner brief for manufacturers. The manufacturer brief is shown in full here and downloads as a PDF.",
     "prof.tab.kind": "Summary · 6p PDF",
     "brief.tab.kind": "Summary · 4p PDF",
+    "mfr.tab.kind": "Full · 1p PDF",
     "prof.toc.kicker": "Contents",
     "prof.toc.t": "Inside the PDF · 6 pages",
     "prof.toc.lead": "The organisation chart, item details, sourcing bases and trade process are covered in more depth across these pages. Print it and hand it over as is.",
@@ -758,7 +832,33 @@ const i18n = {
     "network.korea.tag": "VL M&C",
     "network.legend.korea": "VL Korea",
     "network.hub": "APEX",
-    "tab.resource": "Resources",
+    "track.badge": "Demo",
+    "track.title": "Shipment tracking",
+    "track.lead": "Enter a sample B/L number to see a simulated route on the map. This is not connected to a live carrier feed.",
+    "track.label": "B/L number",
+    "track.ph": "APEX-DAR-2608-001",
+    "track.go": "Track",
+    "track.samples": "Sample numbers",
+    "track.note": "This is a website demo. Live container position and ETA are shared after contract, from the carrier or forwarder.",
+    "track.unknown": "That number is not a demo sample. Tap one of the sample B/Ls below.",
+    "track.hud.bl": "B/L",
+    "track.hud.vessel": "Vessel",
+    "track.hud.cargo": "Cargo",
+    "track.hud.route": "Lane",
+    "track.status.search": "Looking up",
+    "track.status.depart": "Departed",
+    "track.status.transit": "At sea",
+    "track.status.arrive": "Arriving",
+    "track.status.done": "Arrived",
+    "track.cargo.cu": "Copper scrap",
+    "track.cargo.wood": "Wood pellets",
+    "track.cargo.ifp": "Interactive panel",
+    "track.vessel.dar": "MV APEX DARWIN",
+    "track.vessel.jkt": "MV APEX JAVA",
+    "track.vessel.szx": "MV APEX PEARL",
+    "track.route.dar": "Dar es Salaam → Jakarta → Incheon",
+    "track.route.jkt": "Jakarta → Incheon",
+    "track.route.szx": "Shenzhen → Incheon",
     "tab.resource.sub": "Metals · Slag · Dross · Biomass · Kaolin",
     "tab.electronic": "Electronics",
     "tab.electronic.sub": "Displays · PCs · Drones",
@@ -937,6 +1037,7 @@ const i18n = {
     "p.resource.kicker": "Buyer documents",
     "p.doc.profile": "Resources company profile",
     "p.doc.brief": "Resources briefing",
+    "p.doc.mfr": "Manufacturer partner brief",
     "p.doc.catalog": "Factory product catalog",
     "p.doc.spec": "Technical spec sheet",
     "p.doc.brochure75": "75-inch brochure",
@@ -998,6 +1099,50 @@ const i18n = {
     "brief.wood.t": "Wood pellets",
     "brief.wood.p": "Korea imported about 3.93 million MT in 2025. Indonesia supplied about 900,000 MT (23%) and is a core origin. Moisture, calorific value, and ash become contract terms.",
     "brief.disclaimer": "This is a public brief and does not include counterparties or contract prices. It can be forwarded with the company profile.",
+    "mfr.tag": "Manufacturer Partner Brief · Electronics &amp; Resources",
+    "mfr.cover.title": "Local partner in Indonesia and Korea",
+    "mfr.cover.meta": "APEX-MFR-BRIEF · Rev. 2026.08 · For manufacturers · 1 page",
+    "mfr.download": "EN · 中文 PDF",
+    "mfr.download.ko": "Korean PDF",
+    "mfr.lead": "APEX is the public-facing brand that executes in Indonesia. Equal partner VL M&amp;C oversees all Korea-side work. This page is for manufacturers — electronics factories and resource producers — before a quotation.",
+    "mfr.s1": "Resource items",
+    "mfr.s2": "Electronics lines",
+    "mfr.s3": "Indonesia · Korea",
+    "mfr.s4": "Inspect before ship",
+    "mfr.who.t": "Who we are",
+    "mfr.apex.p": "Tangerang. Local sourcing, inspection and delivery. Public-facing brand.",
+    "mfr.vl.p": "Incheon. Oversees every Korea-side assignment: window, customs, delivery.",
+    "mfr.range.t": "What we source",
+    "mfr.range.res.t": "Resources",
+    "mfr.range.res.p": "Copper scrap · Aluminium ingot · Aluminium dross · Tin / nickel slag · Wood pellets · Kaolin",
+    "mfr.range.ele.t": "Electronics",
+    "mfr.range.ele.p": "Interactive flat panel 65 / 75 / 86\" · OPS module · Laptop · Tablet PC · Agricultural drone 30 / 40 / 50 L",
+    "mfr.how.t": "How we work together",
+    "mfr.how.1t": "Lock spec",
+    "mfr.how.1p": "Grade, assay or BOM before any order.",
+    "mfr.how.2t": "Sample · inspect",
+    "mfr.how.2p": "Approved sample or a nominated inspector.",
+    "mfr.how.3t": "Trial shipment",
+    "mfr.how.3p": "First lot proves quality, then we scale.",
+    "mfr.how.4t": "Repeat supply",
+    "mfr.how.4p": "Calendar, packing and aftercare in the contract.",
+    "mfr.ask.t": "What we need  /  What we provide",
+    "mfr.need.t": "From the manufacturer",
+    "mfr.need.1": "Locked spec matching the approved sample or assay",
+    "mfr.need.2": "Stated monthly capacity and lead time",
+    "mfr.need.3": "Access for PSI or a nominated inspector",
+    "mfr.need.4": "Export packing, documents, Incoterms on the PI",
+    "mfr.need.5": "Warranty / spares (electronics) or settlement rules (resources)",
+    "mfr.give.t": "From APEX · VL",
+    "mfr.give.1": "Indonesia local execution from Tangerang (APEX)",
+    "mfr.give.2": "Korea window, customs and delivery (VL)",
+    "mfr.give.3": "Orders only after specification is locked",
+    "mfr.give.4": "Trial shipment, then repeat volume",
+    "mfr.give.5": "Payment to company accounts only",
+    "mfr.next.t": "Next step",
+    "mfr.next.p": "Send item, locked spec, monthly capacity and first-lot quantity. We reply with a specification lock sheet.",
+    "mfr.contact.t": "Contact",
+    "mfr.disc": "General introduction only. Price, stock and schedule follow the offer at inquiry. This brief excludes internal counterparties and contract unit prices. Send it separately from the buyer profile and trade briefing.",
     "process.eyebrow": "How We Work",
     "process.title": "From inquiry to delivery",
     "process.1t": "Scope the need",
@@ -1042,7 +1187,7 @@ const i18n = {
     "nav.main": "Main menu",
     "materials.label": "Product preview",
     "tablist.products": "Product categories",
-    "tablist.docs": "Resources documents",
+    "tablist.docs": "Shareable documents",
     "lang.group": "Language",
     "lang.ko": "Korean",
     "lang.id": "Bahasa Indonesia",
@@ -1061,6 +1206,7 @@ const i18n = {
     "form.item.drone": "Agricultural drone",
     "form.item.profile": "Resources company profile",
     "form.item.brief": "Resources trade briefing",
+    "form.item.mfr": "Manufacturer partner brief",
     "form.item.resdocs": "Resources documents",
     "form.item.other": "Other",
     "footer.blurb": "APEX is the public-facing brand. Equal partner VL M&C oversees all Korea-side work. Resources and electronics run together.",
@@ -1083,16 +1229,17 @@ const i18n = {
     "nav.inquiry": "Minta penawaran",
     "materials.label": "Pratinjau produk",
     "tablist.products": "Kategori produk",
-    "tablist.docs": "Dokumen Divisi Sumber Daya",
+    "tablist.docs": "Dokumen untuk dibagikan",
     "lang.group": "Bahasa",
     "lang.ko": "Korea",
     "lang.id": "Bahasa Indonesia",
     "lang.en": "Inggris",
     "prof.sec.eyebrow": "Laporan",
     "prof.sec.title": "Dokumen untuk dibagikan",
-    "prof.sec.lead": "Dua dokumen yang bisa dikirim langsung ke pembeli dan mitra. Intinya ada di sini; teks lengkapnya dikirim setelah pertanyaan.",
+    "prof.sec.lead": "Profil dan briefing untuk pembeli, plus brief mitra satu halaman terpisah untuk pabrik. Brief pabrik ditampilkan utuh di sini dan bisa diunduh sebagai PDF.",
     "prof.tab.kind": "Ringkasan · PDF 6 hlm",
     "brief.tab.kind": "Ringkasan · PDF 4 hlm",
+    "mfr.tab.kind": "Lengkap · PDF 1 hlm",
     "prof.toc.kicker": "Isi",
     "prof.toc.t": "Isi PDF · 6 halaman",
     "prof.toc.lead": "Bagan organisasi, rincian produk, basis pengadaan, dan proses perdagangan diuraikan lebih dalam di halaman-halaman ini. Bisa dicetak dan diserahkan apa adanya.",
@@ -1300,7 +1447,33 @@ const i18n = {
     "network.korea.tag": "VL M&amp;C",
     "network.legend.korea": "VL Korea",
     "network.hub": "APEX",
-    "tab.resource": "Sumber daya",
+    "track.badge": "Demo",
+    "track.title": "Pelacakan pengapalan",
+    "track.lead": "Masukkan nomor B/L sampel untuk melihat rute simulasi di peta. Ini tidak terhubung ke umpan operator langsung.",
+    "track.label": "Nomor B/L",
+    "track.ph": "APEX-DAR-2608-001",
+    "track.go": "Lacak",
+    "track.samples": "Nomor sampel",
+    "track.note": "Ini demo situs. Posisi kontainer dan ETA yang sebenarnya dibagikan setelah kontrak, dari operator atau forwarder.",
+    "track.unknown": "Nomor itu bukan sampel demo. Ketuk salah satu B/L sampel di bawah.",
+    "track.hud.bl": "B/L",
+    "track.hud.vessel": "Kapal",
+    "track.hud.cargo": "Muatan",
+    "track.hud.route": "Jalur",
+    "track.status.search": "Mencari",
+    "track.status.depart": "Berangkat",
+    "track.status.transit": "Di laut",
+    "track.status.arrive": "Tiba",
+    "track.status.done": "Sampai",
+    "track.cargo.cu": "Skrap tembaga",
+    "track.cargo.wood": "Pelet kayu",
+    "track.cargo.ifp": "Papan interaktif",
+    "track.vessel.dar": "MV APEX DARWIN",
+    "track.vessel.jkt": "MV APEX JAVA",
+    "track.vessel.szx": "MV APEX PEARL",
+    "track.route.dar": "Dar es Salaam → Jakarta → Incheon",
+    "track.route.jkt": "Jakarta → Incheon",
+    "track.route.szx": "Shenzhen → Incheon",
     "tab.resource.sub": "Logam · Terak · Dross · Biomassa · Kaolin",
     "tab.electronic": "Elektronik",
     "tab.electronic.sub": "Papan · PC · Drone",
@@ -1479,6 +1652,7 @@ const i18n = {
     "p.resource.kicker": "Dokumen pembeli",
     "p.doc.profile": "Profil perusahaan sumber daya",
     "p.doc.brief": "Briefing sumber daya",
+    "p.doc.mfr": "Brief mitra untuk pabrik",
     "p.doc.catalog": "Katalog produk pabrik",
     "p.doc.spec": "Lembar spek teknis",
     "p.doc.brochure75": "Brosur 75 inci",
@@ -1540,6 +1714,50 @@ const i18n = {
     "brief.wood.t": "Pelet kayu",
     "brief.wood.p": "Korea mengimpor sekitar 3,93 juta MT pada 2025. Indonesia memasok sekitar 900.000 MT (23%) dan merupakan asal inti. Kadar air, nilai kalor, dan abu menjadi syarat kontrak.",
     "brief.disclaimer": "Ini briefing publik dan tidak memuat mitra dagang atau harga kontrak. Bisa diteruskan bersama profil perusahaan.",
+    "mfr.tag": "Manufacturer Partner Brief · Electronics &amp; Resources",
+    "mfr.cover.title": "Mitra lokal di Indonesia dan Korea",
+    "mfr.cover.meta": "APEX-MFR-BRIEF · Rev. 2026.08 · Untuk pabrik · 1 halaman",
+    "mfr.download": "PDF EN · 中文",
+    "mfr.download.ko": "PDF Korea",
+    "mfr.lead": "APEX adalah merek depan yang mengeksekusi di Indonesia. Mitra setara VL M&amp;C mengawasi semua pekerjaan sisi Korea. Halaman ini untuk pabrik — pabrik elektronik dan produsen sumber daya — sebelum penawaran.",
+    "mfr.s1": "Produk sumber daya",
+    "mfr.s2": "Lini elektronik",
+    "mfr.s3": "Indonesia · Korea",
+    "mfr.s4": "Inspeksi sebelum kapal",
+    "mfr.who.t": "Siapa kami",
+    "mfr.apex.p": "Tangerang. Pengadaan, inspeksi, dan pengiriman lokal. Merek depan.",
+    "mfr.vl.p": "Incheon. Mengawasi setiap tugas sisi Korea: jendela, bea cukai, pengiriman.",
+    "mfr.range.t": "Apa yang kami adakan",
+    "mfr.range.res.t": "Sumber daya",
+    "mfr.range.res.p": "Skrap tembaga · ingot aluminium · dross aluminium · terak timah/nikel · pelet kayu · kaolin",
+    "mfr.range.ele.t": "Elektronik",
+    "mfr.range.ele.p": "Papan interaktif 65 / 75 / 86 inci · modul OPS · laptop · tablet PC · drone pertanian 30 / 40 / 50 L",
+    "mfr.how.t": "Cara kami bekerja sama",
+    "mfr.how.1t": "Kunci spek",
+    "mfr.how.1p": "Mutu, uji lab, atau BOM sebelum pesanan.",
+    "mfr.how.2t": "Sampel · inspeksi",
+    "mfr.how.2p": "Sampel disetujui atau inspektur yang ditunjuk.",
+    "mfr.how.3t": "Pengiriman uji",
+    "mfr.how.3p": "Lot pertama membuktikan mutu, lalu ditingkatkan.",
+    "mfr.how.4t": "Pasokan berulang",
+    "mfr.how.4p": "Kalender, kemasan, dan purna jual di kontrak.",
+    "mfr.ask.t": "Yang kami minta  /  Yang kami tanggung",
+    "mfr.need.t": "Dari pabrik",
+    "mfr.need.1": "Spek terkunci sama dengan sampel atau uji lab yang disetujui",
+    "mfr.need.2": "Kapasitas bulanan dan lead time yang dinyatakan",
+    "mfr.need.3": "Akses PSI atau inspektur yang ditunjuk",
+    "mfr.need.4": "Kemasan ekspor, dokumen, Incoterms di PI",
+    "mfr.need.5": "Garansi/suku cadang (elektronik) atau aturan settlement (sumber daya)",
+    "mfr.give.t": "Dari APEX · VL",
+    "mfr.give.1": "Eksekusi lokal Indonesia dari Tangerang (APEX)",
+    "mfr.give.2": "Jendela Korea, bea cukai, dan pengiriman (VL)",
+    "mfr.give.3": "Pesanan hanya setelah spek terkunci",
+    "mfr.give.4": "Pengiriman uji, lalu volume berulang",
+    "mfr.give.5": "Pembayaran hanya ke rekening perusahaan",
+    "mfr.next.t": "Langkah berikutnya",
+    "mfr.next.p": "Kirim produk, spek terkunci, kapasitas bulanan, dan kuantitas lot pertama. Kami membalas dengan lembar kunci spek.",
+    "mfr.contact.t": "Kontak",
+    "mfr.disc": "Hanya pengantar umum. Harga, stok, dan jadwal mengikuti penawaran saat pertanyaan. Brief ini tidak memuat mitra internal atau harga satuan kontrak. Kirim terpisah dari profil pembeli dan briefing perdagangan.",
     "process.eyebrow": "Cara Kami Bekerja",
     "process.title": "Dari pertanyaan hingga pengiriman",
     "process.1t": "Tentukan kebutuhan",
@@ -1582,6 +1800,7 @@ const i18n = {
     "form.item.drone": "Drone pertanian",
     "form.item.profile": "Profil perusahaan sumber daya",
     "form.item.brief": "Briefing perdagangan sumber daya",
+    "form.item.mfr": "Brief mitra untuk pabrik",
     "form.item.resdocs": "Dokumen sumber daya",
     "form.item.other": "Lainnya",
     "form.msg": "Pesan",
@@ -1808,7 +2027,8 @@ tabs.forEach((tab, index) => {
 const sheetTabs = Array.from(document.querySelectorAll(".sheet-tab"));
 const sheets = {
   profile: document.getElementById("sheet-profile"),
-  briefing: document.getElementById("sheet-briefing")
+  briefing: document.getElementById("sheet-briefing"),
+  mfr: document.getElementById("sheet-mfr")
 };
 
 function activateSheet(name, { focusTab = false } = {}) {
@@ -1855,6 +2075,11 @@ function goToItem(hash) {
     requestAnimationFrame(() => scrollToHash("profile"));
     return;
   }
+  if (id === "mfr" || id === "manufacturer") {
+    activateSheet("mfr");
+    requestAnimationFrame(() => scrollToHash("profile"));
+    return;
+  }
   if (id === "profile") activateSheet("profile");
   if (itemPart[id]) activateTab(itemPart[id]);
   requestAnimationFrame(() => scrollToHash(id === "briefing" ? "profile" : id));
@@ -1876,6 +2101,9 @@ window.addEventListener("hashchange", () => goToItem(location.hash));
 
 if (location.hash === "#briefing") {
   activateSheet("briefing");
+  requestAnimationFrame(() => scrollToHash("profile"));
+} else if (location.hash === "#mfr" || location.hash === "#manufacturer") {
+  activateSheet("mfr");
   requestAnimationFrame(() => scrollToHash("profile"));
 } else if (location.hash === "#library") {
   history.replaceState(null, "", "#products");
@@ -1939,6 +2167,240 @@ function applyLang(next) {
   if (optRes && copy["form.optRes"]) optRes.label = copy["form.optRes"];
   if (optEle && copy["form.optEle"]) optEle.label = copy["form.optEle"];
   if (optDocs && copy["form.optDocs"]) optDocs.label = copy["form.optDocs"];
+  refreshTrackCopy();
+}
+
+/* ---------- Shipment tracking demo (mock) ---------- */
+const TRACK_MAP = { w: 2000, h: 980 };
+const trackSamplesEl = document.getElementById("trackSamples");
+
+function pctToVb(x, y) {
+  return [x / 100 * TRACK_MAP.w, y / 100 * TRACK_MAP.h];
+}
+
+function curvePath(pts) {
+  const vb = (pts || []).map(([x, y]) => pctToVb(x, y));
+  if (vb.length < 2) return "";
+  const fmt = (p) => `${p[0].toFixed(1)} ${p[1].toFixed(1)}`;
+  if (vb.length === 2) return `M ${fmt(vb[0])} L ${fmt(vb[1])}`;
+  let d = `M ${fmt(vb[0])}`;
+  for (let i = 0; i < vb.length - 1; i += 1) {
+    const p0 = vb[Math.max(0, i - 1)];
+    const p1 = vb[i];
+    const p2 = vb[i + 1];
+    const p3 = vb[Math.min(vb.length - 1, i + 2)];
+    const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6];
+    const c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
+    d += ` C ${fmt(c1)} ${fmt(c2)} ${fmt(p2)}`;
+  }
+  return d;
+}
+
+const TRACK_SAMPLES = {
+  "APEX-DAR-2608-001": {
+    vessel: "track.vessel.dar",
+    cargo: "track.cargo.cu",
+    route: "track.route.dar",
+    pins: ["dar", "jkt", "tng", "icn"],
+    duration: 9000,
+    points: [
+      [60.91, 64.86],
+      [66.4, 72.2],
+      [72.8, 69.4],
+      [77.6, 65.6],
+      [79.68, 64.43],
+      [81.5, 57.2],
+      [83.1, 49.4],
+      [84.4, 41.2],
+      [85.2, 33.25]
+    ]
+  },
+  "APEX-JKT-2608-014": {
+    vessel: "track.vessel.jkt",
+    cargo: "track.cargo.wood",
+    route: "track.route.jkt",
+    pins: ["jkt", "tng", "icn"],
+    duration: 6500,
+    points: [
+      [79.68, 64.43],
+      [81.6, 57.0],
+      [83.2, 48.8],
+      [84.5, 40.4],
+      [85.2, 33.25]
+    ]
+  },
+  "APEX-SZX-2608-075": {
+    vessel: "track.vessel.szx",
+    cargo: "track.cargo.ifp",
+    route: "track.route.szx",
+    pins: ["szx", "icn"],
+    duration: 5200,
+    points: [
+      [81.68, 43.9],
+      [83.3, 40.6],
+      [84.5, 36.8],
+      [85.2, 33.25]
+    ]
+  }
+};
+
+const trackForm = document.getElementById("trackForm");
+const blInput = document.getElementById("blInput");
+const trackMsg = document.getElementById("trackMsg");
+const trackHud = document.getElementById("trackHud");
+const trackMap = document.querySelector(".network-map");
+const trackRoute = document.getElementById("trackRoute");
+const trackRouteBg = document.getElementById("trackRouteBg");
+const trackShip = document.getElementById("trackShip");
+const trackBar = document.getElementById("trackBar");
+const trackStatus = document.getElementById("trackStatus");
+let trackRaf = 0;
+let trackActive = null;
+let trackProgress = 0;
+
+function statusKeyForProgress(p) {
+  if (p < 0.08) return "track.status.search";
+  if (p < 0.18) return "track.status.depart";
+  if (p < 0.86) return "track.status.transit";
+  if (p < 1) return "track.status.arrive";
+  return "track.status.done";
+}
+
+function refreshTrackCopy() {
+  if (!trackActive || !trackHud || trackHud.hidden) return;
+  const copy = dict();
+  const sample = TRACK_SAMPLES[trackActive];
+  if (!sample) return;
+  const bl = document.getElementById("trackBlVal");
+  const vessel = document.getElementById("trackVesselVal");
+  const cargo = document.getElementById("trackCargoVal");
+  const route = document.getElementById("trackRouteVal");
+  if (bl) bl.textContent = trackActive;
+  if (vessel) vessel.textContent = copy[sample.vessel] || sample.vessel;
+  if (cargo) cargo.textContent = copy[sample.cargo] || sample.cargo;
+  if (route) route.textContent = copy[sample.route] || sample.route;
+  if (trackStatus) trackStatus.textContent = copy[statusKeyForProgress(trackProgress)] || "";
+}
+
+function setTrackPins(names) {
+  document.querySelectorAll(".map-pin").forEach((pin) => pin.classList.remove("is-on-route"));
+  (names || []).forEach((key) => {
+    document.querySelector(`.map-pin[data-pin="${key}"]`)?.classList.add("is-on-route");
+  });
+}
+
+function placeShip(path, len, t) {
+  if (!trackShip || !path || len <= 0) return;
+  const d = Math.min(len, Math.max(0, len * t));
+  const p = path.getPointAtLength(d);
+  const p2 = path.getPointAtLength(Math.min(len, d + 12));
+  const ang = (Math.atan2(p2.y - p.y, p2.x - p.x) * 180) / Math.PI + 90;
+  trackShip.removeAttribute("hidden");
+  trackShip.setAttribute("transform", `translate(${p.x} ${p.y}) rotate(${ang})`);
+}
+
+function stopTrackAnim() {
+  if (trackRaf) cancelAnimationFrame(trackRaf);
+  trackRaf = 0;
+}
+
+function runTrack(bl) {
+  const sample = TRACK_SAMPLES[bl];
+  if (!sample || !trackRoute || !trackRouteBg) return;
+
+  stopTrackAnim();
+  trackActive = bl;
+  trackProgress = 0;
+  trackMap?.classList.add("is-tracking");
+  trackSamplesEl?.classList.remove("is-hint");
+  if (trackHud) trackHud.hidden = false;
+  if (trackMsg) {
+    trackMsg.hidden = true;
+    trackMsg.textContent = "";
+  }
+  blInput?.classList.remove("is-invalid");
+  document.querySelectorAll(".track-chip").forEach((chip) => {
+    chip.classList.toggle("is-active", chip.dataset.bl === bl);
+  });
+  setTrackPins(sample.pins);
+
+  const d = curvePath(sample.points);
+  trackRouteBg.setAttribute("d", d);
+  trackRoute.setAttribute("d", d);
+  const len = trackRoute.getTotalLength();
+  trackRoute.style.strokeDasharray = String(len);
+  trackRoute.style.strokeDashoffset = String(len);
+  refreshTrackCopy();
+
+  const duration = reduceMotion ? 1 : sample.duration;
+  const start = performance.now();
+
+  function frame(now) {
+    const t = Math.min(1, (now - start) / duration);
+    const ease = 1 - (1 - t) ** 3;
+    trackProgress = ease;
+    trackRoute.style.strokeDashoffset = String(len * (1 - ease));
+    if (trackBar) trackBar.style.width = `${Math.round(ease * 100)}%`;
+    placeShip(trackRoute, len, ease);
+    if (trackStatus) trackStatus.textContent = dict()[statusKeyForProgress(ease)] || "";
+    if (t < 1) {
+      trackRaf = requestAnimationFrame(frame);
+    } else {
+      trackRaf = 0;
+      trackProgress = 1;
+      refreshTrackCopy();
+    }
+  }
+
+  if (reduceMotion) {
+    trackProgress = 1;
+    trackRoute.style.strokeDashoffset = "0";
+    if (trackBar) trackBar.style.width = "100%";
+    placeShip(trackRoute, len, 1);
+    refreshTrackCopy();
+    return;
+  }
+
+  trackRaf = requestAnimationFrame(frame);
+}
+
+function normalizeBl(value) {
+  return String(value || "").trim().toUpperCase().replace(/\s+/g, "");
+}
+
+if (trackForm && blInput) {
+  trackForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const bl = normalizeBl(blInput.value);
+    blInput.value = bl;
+    if (TRACK_SAMPLES[bl]) {
+      runTrack(bl);
+      return;
+    }
+    stopTrackAnim();
+    trackActive = null;
+    trackProgress = 0;
+    trackMap?.classList.remove("is-tracking");
+    setTrackPins([]);
+    if (trackHud) trackHud.hidden = true;
+    if (trackShip) trackShip.setAttribute("hidden", "");
+    if (trackRoute) trackRoute.setAttribute("d", "");
+    if (trackRouteBg) trackRouteBg.setAttribute("d", "");
+    blInput.classList.add("is-invalid");
+    trackSamplesEl?.classList.add("is-hint");
+    if (trackMsg) {
+      trackMsg.hidden = false;
+      trackMsg.textContent = dict()["track.unknown"] || "";
+    }
+    document.querySelectorAll(".track-chip").forEach((chip) => chip.classList.remove("is-active"));
+  });
+
+  document.querySelectorAll(".track-chip").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      blInput.value = chip.dataset.bl || "";
+      trackForm.requestSubmit();
+    });
+  });
 }
 
 applyLang(lang);
