@@ -1343,7 +1343,7 @@ ul, ol { list-style: none; }
   left: var(--x);
   top: var(--y);
   transform: translate(-50%, -50%);
-  z-index: 3;
+  z-index: var(--z, 3);
 }
 .map-pin-dot {
   display: block;
@@ -1352,11 +1352,135 @@ ul, ol { list-style: none; }
   border: 3px solid #fff;
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(15, 28, 50, 0.22);
+  position: relative;
+  z-index: 3;
+}
+.map-pin.is-origin .map-pin-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  transform: rotate(45deg);
 }
 .map-pin.is-resource .map-pin-dot { background: var(--gold); }
 .map-pin.is-electronics .map-pin-dot { background: #4e8fc0; }
 .map-pin.is-hub .map-pin-dot { background: var(--navy); }
 .map-pin.is-korea .map-pin-dot { background: var(--slate); }
+.map-pin.is-aluminum .map-pin-dot { background: #c5d0d8; }
+.map-pin.is-coal .map-pin-dot { background: #c4a056; }
+.map-pin.is-copper .map-pin-dot { background: #c47a3a; }
+.map-pin.is-nickel .map-pin-dot { background: #5f9e8e; }
+.map-pin-leader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: var(--arm, 48px);
+  height: 2px;
+  margin-top: -1px;
+  background: #0b2740;
+  box-shadow: 0 0 0 1px #fff;
+  transform-origin: 0 50%;
+  z-index: 2;
+  pointer-events: none;
+}
+.map-pin-leader::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 8px 5px 0;
+  border-color: transparent #0b2740 transparent transparent;
+  transform: translateY(-50%);
+  filter: drop-shadow(-1px 0 0 #fff);
+}
+.map-pin-card {
+  position: absolute;
+  z-index: 4;
+  padding: 5px 8px 5px 9px;
+  border-radius: 8px;
+  background: rgba(8, 22, 38, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.42);
+  color: #fff;
+  white-space: nowrap;
+  line-height: 1.2;
+  pointer-events: none;
+}
+.map-pin-card strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.map-pin-card em {
+  display: block;
+  margin-top: 2px;
+  font-style: normal;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--gold-2);
+}
+.map-pin.is-aluminum .map-pin-card em { color: #d5dde3; }
+.map-pin.is-coal .map-pin-card em { color: #e0c07a; }
+.map-pin.is-copper .map-pin-card em { color: #e09a5a; }
+.map-pin.is-nickel .map-pin-card em { color: #8fc9b8; }
+.map-pin.is-electronics .map-pin-card em { color: #7eb6de; }
+.map-pin.is-hub .map-pin-card em { color: #9ec9e8; }
+.map-pin.is-korea .map-pin-card em { color: #c5ccd4; }
+.map-pin[data-label="e"] .map-pin-leader { transform: rotate(0deg); }
+.map-pin[data-label="e"] .map-pin-card {
+  left: calc(var(--arm, 48px) + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.map-pin[data-label="w"] .map-pin-leader { transform: rotate(180deg); }
+.map-pin[data-label="w"] .map-pin-card {
+  right: calc(var(--arm, 48px) + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.map-pin[data-label="n"] .map-pin-leader { transform: rotate(-90deg); }
+.map-pin[data-label="n"] .map-pin-card {
+  left: 50%;
+  bottom: calc(var(--arm, 48px) + 8px);
+  transform: translateX(-50%);
+}
+.map-pin[data-label="s"] .map-pin-leader { transform: rotate(90deg); }
+.map-pin[data-label="s"] .map-pin-card {
+  left: 50%;
+  top: calc(var(--arm, 48px) + 8px);
+  transform: translateX(-50%);
+}
+.map-pin[data-label="ne"] .map-pin-leader { transform: rotate(-40deg); }
+.map-pin[data-label="ne"] .map-pin-card {
+  left: calc(var(--arm, 48px) * 0.76);
+  bottom: calc(var(--arm, 48px) * 0.62);
+}
+.map-pin[data-label="nw"] .map-pin-leader { transform: rotate(-140deg); }
+.map-pin[data-label="nw"] .map-pin-card {
+  right: calc(var(--arm, 48px) * 0.76);
+  bottom: calc(var(--arm, 48px) * 0.62);
+}
+.map-pin[data-label="se"] .map-pin-leader { transform: rotate(40deg); }
+.map-pin[data-label="se"] .map-pin-card {
+  left: calc(var(--arm, 48px) * 0.76);
+  top: calc(var(--arm, 48px) * 0.62);
+}
+.map-pin[data-label="sw"] .map-pin-leader { transform: rotate(140deg); }
+.map-pin[data-label="sw"] .map-pin-card {
+  right: calc(var(--arm, 48px) * 0.76);
+  top: calc(var(--arm, 48px) * 0.62);
+}
+.network-map.is-tracking .map-pin:not(.is-on-route) {
+  opacity: 0.38;
+}
+.network-map.is-tracking .map-pin:not(.is-on-route) .map-pin-card,
+.network-map.is-tracking .map-pin:not(.is-on-route) .map-pin-leader {
+  opacity: 0;
+}
 .network-legend {
   display: flex;
   flex-wrap: wrap;
@@ -1590,9 +1714,15 @@ ul, ol { list-style: none; }
 .network-map.is-tracking .map-pin-dot {
   transform: scale(0.92);
 }
+.network-map.is-tracking .map-pin.is-origin .map-pin-dot {
+  transform: rotate(45deg) scale(0.92);
+}
 .network-map.is-tracking .map-pin.is-on-route .map-pin-dot {
   transform: scale(1.2);
   box-shadow: 0 0 0 6px rgba(47, 158, 216, 0.28);
+}
+.network-map.is-tracking .map-pin.is-origin.is-on-route .map-pin-dot {
+  transform: rotate(45deg) scale(1.2);
 }
 .network-locations {
   display: grid;
@@ -2155,6 +2285,8 @@ ul, ol { list-style: none; }
   .contact-desks,
   .contact-list { margin-top: 16px; }
   .map-pin-dot { width: 11px; height: 11px; border-width: 2px; }
+  .map-pin-card,
+  .map-pin-leader { display: none; }
 }
 
 @media (min-width: 640px) {
@@ -2167,6 +2299,13 @@ ul, ol { list-style: none; }
   .about-photo img { height: 280px; }
   .about-profile { margin-top: 56px; }
   .org-wrap { margin-top: 56px; }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .map-pin.is-dense .map-pin-card,
+  .map-pin.is-dense .map-pin-leader { display: none; }
+  .map-pin-card { padding: 4px 7px; }
+  .map-pin-card strong { font-size: 11px; }
 }
 
 @media (min-width: 768px) {
