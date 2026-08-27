@@ -2005,6 +2005,12 @@ document.querySelectorAll("[data-gallery]").forEach((gallery) => {
     btn.addEventListener("click", () => {
       if (!main) return;
       main.src = btn.getAttribute("data-gallery-src");
+      const picture = main.parentElement;
+      if (picture && picture.tagName === "PICTURE") {
+        const source = picture.querySelector("source");
+        const set = btn.getAttribute("data-gallery-srcset");
+        if (source && set) source.srcset = set;
+      }
       const key = btn.getAttribute("data-i18n-gallery-alt");
       const alt = key ? dict()[key] : "";
       if (alt) main.setAttribute("alt", alt);

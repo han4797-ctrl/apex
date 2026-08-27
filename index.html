@@ -25,7 +25,8 @@
   <meta name="twitter:description" content="인도네시아는 APEX, 한국은 VL. 자원부터 전자기기까지 동등 파트너가 실행합니다.">
   <meta name="twitter:image" content="https://apextelcom.com/assets/hero-port.jpg">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preload" as="image" href="assets/hero-port.jpg">
+  <link rel="preload" as="image" type="image/webp" href="assets/opt/hero-port-1440.webp"
+        imagesrcset="assets/opt/hero-port-640.webp 640w, assets/opt/hero-port-1024.webp 1024w, assets/opt/hero-port-1440.webp 1440w, assets/opt/hero-port-1536.webp 1536w" imagesizes="100vw">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -106,7 +107,10 @@
   <main id="main">
     <section class="hero" id="top">
       <div class="hero-media" aria-hidden="true">
-        <img src="assets/hero-port.jpg" alt="" width="1920" height="1080" fetchpriority="high">
+        <picture>
+          <source type="image/webp" srcset="assets/opt/hero-port-640.webp 640w, assets/opt/hero-port-1024.webp 1024w, assets/opt/hero-port-1440.webp 1440w, assets/opt/hero-port-1536.webp 1536w" sizes="100vw">
+          <img src="assets/hero-port.jpg" alt="" width="1536" height="1024" fetchpriority="high">
+        </picture>
       </div>
       <div class="container hero-inner">
         <p class="eyebrow reveal" data-i18n="hero.eyebrow">APEX Indonesia · with VL Korea</p>
@@ -141,7 +145,10 @@
 
     <section class="materials" data-i18n-aria="materials.label" aria-label="취급 품목 미리보기">
       <a class="material" href="#copper" data-goto="resource">
-        <img src="assets/copper-scrap.jpg" alt="구리 스크랩" width="1200" height="900" loading="lazy">
+        <picture>
+          <source type="image/webp" srcset="assets/opt/copper-scrap-400.webp 400w, assets/opt/copper-scrap-640.webp 640w, assets/opt/copper-scrap-900.webp 900w, assets/opt/copper-scrap-1200.webp 1200w" sizes="(min-width: 1024px) 20vw, 50vw">
+          <img src="assets/copper-scrap.jpg" alt="구리 스크랩" width="1200" height="800" loading="lazy">
+        </picture>
         <span>
           <small>01</small>
           <strong data-i18n="p.copper.t">구리 스크랩</strong>
@@ -149,7 +156,10 @@
         </span>
       </a>
       <a class="material" href="#aluminum" data-goto="resource">
-        <img src="assets/aluminum-ingot.jpg" alt="알루미늄 잉곳" width="1200" height="900" loading="lazy">
+        <picture>
+          <source type="image/webp" srcset="assets/opt/aluminum-ingot-400.webp 400w, assets/opt/aluminum-ingot-640.webp 640w, assets/opt/aluminum-ingot-900.webp 900w, assets/opt/aluminum-ingot-1200.webp 1200w" sizes="(min-width: 1024px) 20vw, 50vw">
+          <img src="assets/aluminum-ingot.jpg" alt="알루미늄 잉곳" width="1200" height="800" loading="lazy">
+        </picture>
         <span>
           <small>02</small>
           <strong data-i18n="p.alu.t">알루미늄 잉곳</strong>
@@ -157,7 +167,10 @@
         </span>
       </a>
       <a class="material" href="#dross" data-goto="resource">
-        <img src="assets/aluminum-dross.jpg" alt="알루미늄 드로스" width="1200" height="900" loading="lazy">
+        <picture>
+          <source type="image/webp" srcset="assets/opt/aluminum-dross-400.webp 400w, assets/opt/aluminum-dross-640.webp 640w, assets/opt/aluminum-dross-900.webp 900w, assets/opt/aluminum-dross-1200.webp 1200w" sizes="(min-width: 1024px) 20vw, 50vw">
+          <img src="assets/aluminum-dross.jpg" alt="알루미늄 드로스" width="1200" height="800" loading="lazy">
+        </picture>
         <span>
           <small>03</small>
           <strong data-i18n="p.dross.t">알루미늄 드로스</strong>
@@ -165,7 +178,10 @@
         </span>
       </a>
       <a class="material" href="#tin" data-goto="resource">
-        <img src="assets/tin-slag.jpg" alt="주석 슬래그" width="1200" height="900" loading="lazy">
+        <picture>
+          <source type="image/webp" srcset="assets/opt/tin-slag-400.webp 400w, assets/opt/tin-slag-640.webp 640w, assets/opt/tin-slag-900.webp 900w, assets/opt/tin-slag-1200.webp 1200w" sizes="(min-width: 1024px) 20vw, 50vw">
+          <img src="assets/tin-slag.jpg" alt="주석 슬래그" width="1200" height="800" loading="lazy">
+        </picture>
         <span>
           <small>04</small>
           <strong data-i18n="p.tin.t">주석 슬래그</strong>
@@ -173,7 +189,10 @@
         </span>
       </a>
       <a class="material" href="#nickel" data-goto="resource">
-        <img src="assets/nickel-slag.jpg" alt="니켈 슬래그" width="1200" height="900" loading="lazy">
+        <picture>
+          <source type="image/webp" srcset="assets/opt/nickel-slag-400.webp 400w, assets/opt/nickel-slag-640.webp 640w, assets/opt/nickel-slag-900.webp 900w, assets/opt/nickel-slag-1200.webp 1200w" sizes="(min-width: 1024px) 20vw, 50vw">
+          <img src="assets/nickel-slag.jpg" alt="니켈 슬래그" width="1200" height="800" loading="lazy">
+        </picture>
         <span>
           <small>05</small>
           <strong data-i18n="p.nick.t">니켈 슬래그</strong>
@@ -181,7 +200,10 @@
         </span>
       </a>
       <a class="material" href="#wood" data-goto="resource">
-        <img src="assets/wood-pellets.jpg" alt="우드펠릿" width="1200" height="900" loading="lazy">
+        <picture>
+          <source type="image/webp" srcset="assets/opt/wood-pellets-400.webp 400w, assets/opt/wood-pellets-640.webp 640w, assets/opt/wood-pellets-900.webp 900w, assets/opt/wood-pellets-1200.webp 1200w" sizes="(min-width: 1024px) 20vw, 50vw">
+          <img src="assets/wood-pellets.jpg" alt="우드펠릿" width="1200" height="800" loading="lazy">
+        </picture>
         <span>
           <small>06</small>
           <strong data-i18n="p.wood.t">우드펠릿</strong>
@@ -189,7 +211,10 @@
         </span>
       </a>
       <a class="material material-break" href="#kaolin" data-goto="resource">
-        <img src="assets/kaolin.jpg" alt="카올린" width="1200" height="900" loading="lazy">
+        <picture>
+          <source type="image/webp" srcset="assets/opt/kaolin-400.webp 400w, assets/opt/kaolin-640.webp 640w, assets/opt/kaolin-900.webp 900w, assets/opt/kaolin-1025.webp 1025w" sizes="(min-width: 1024px) 20vw, 50vw">
+          <img src="assets/kaolin.jpg" alt="카올린" width="1025" height="795" loading="lazy">
+        </picture>
         <span>
           <small>07</small>
           <strong data-i18n="p.kaolin.t">카올린</strong>
@@ -198,7 +223,10 @@
       </a>
 
       <a class="material material-wide is-electronic" href="#eboard" data-goto="electronic">
-        <img src="assets/electronic-board.jpg" alt="전자칠판" width="1200" height="900" loading="lazy">
+        <picture>
+          <source type="image/webp" srcset="assets/opt/electronic-board-400.webp 400w, assets/opt/electronic-board-640.webp 640w, assets/opt/electronic-board-900.webp 900w, assets/opt/electronic-board-1200.webp 1200w" sizes="(min-width: 1024px) 20vw, 50vw">
+          <img src="assets/electronic-board.jpg" alt="전자칠판" width="1200" height="900" loading="lazy">
+        </picture>
         <span>
           <small>08</small>
           <strong data-i18n="p.eboard.t">전자칠판</strong>
@@ -206,7 +234,10 @@
         </span>
       </a>
       <a class="material is-electronic" href="#ops" data-goto="electronic">
-        <img src="assets/ops-pc.jpg" alt="OPS 모듈" width="1200" height="900" loading="lazy">
+        <picture>
+          <source type="image/webp" srcset="assets/opt/ops-pc-400.webp 400w, assets/opt/ops-pc-640.webp 640w, assets/opt/ops-pc-900.webp 900w, assets/opt/ops-pc-1200.webp 1200w" sizes="(min-width: 1024px) 20vw, 50vw">
+          <img src="assets/ops-pc.jpg" alt="OPS 모듈" width="1200" height="900" loading="lazy">
+        </picture>
         <span>
           <small>09</small>
           <strong data-i18n="p.ops.t">OPS 모듈</strong>
@@ -214,7 +245,10 @@
         </span>
       </a>
       <a class="material is-electronic" href="#laptop" data-goto="electronic">
-        <img src="assets/laptop.jpg" alt="노트북" width="1200" height="900" loading="lazy">
+        <picture>
+          <source type="image/webp" srcset="assets/opt/laptop-400.webp 400w, assets/opt/laptop-640.webp 640w, assets/opt/laptop-900.webp 900w, assets/opt/laptop-1200.webp 1200w" sizes="(min-width: 1024px) 20vw, 50vw">
+          <img src="assets/laptop.jpg" alt="노트북" width="1200" height="900" loading="lazy">
+        </picture>
         <span>
           <small>10</small>
           <strong data-i18n="p.laptop.t">노트북</strong>
@@ -222,7 +256,10 @@
         </span>
       </a>
       <a class="material is-electronic" href="#tablet" data-goto="electronic">
-        <img src="assets/tablet.jpg" alt="태블릿PC" width="1200" height="900" loading="lazy">
+        <picture>
+          <source type="image/webp" srcset="assets/opt/tablet-400.webp 400w, assets/opt/tablet-640.webp 640w, assets/opt/tablet-900.webp 900w, assets/opt/tablet-1200.webp 1200w" sizes="(min-width: 1024px) 20vw, 50vw">
+          <img src="assets/tablet.jpg" alt="태블릿PC" width="1200" height="900" loading="lazy">
+        </picture>
         <span>
           <small>11</small>
           <strong data-i18n="p.tablet.t">태블릿PC</strong>
@@ -230,7 +267,10 @@
         </span>
       </a>
       <a class="material material-break is-electronic" href="#drone" data-goto="electronic">
-        <img src="assets/agricultural-drone.jpg" alt="농업용 드론" width="1200" height="900" loading="lazy">
+        <picture>
+          <source type="image/webp" srcset="assets/opt/agricultural-drone-400.webp 400w, assets/opt/agricultural-drone-640.webp 640w, assets/opt/agricultural-drone-900.webp 900w, assets/opt/agricultural-drone-1200.webp 1200w" sizes="(min-width: 1024px) 20vw, 50vw">
+          <img src="assets/agricultural-drone.jpg" alt="농업용 드론" width="1200" height="800" loading="lazy">
+        </picture>
         <span>
           <small>12</small>
           <strong data-i18n="p.drone.t">농업용 드론</strong>
@@ -270,7 +310,10 @@
           <p class="eyebrow reveal" data-i18n="about.eyebrow">About APEX</p>
           <h2 class="reveal" data-i18n="about.title">자원을 순환시키고,<br>현장에 기술을 놓습니다</h2>
           <figure class="about-photo reveal">
-            <img src="assets/warehouse.jpg" alt="자원 보관 물류 창고" width="1200" height="900" loading="lazy">
+            <picture>
+              <source type="image/webp" srcset="assets/opt/warehouse-400.webp 400w, assets/opt/warehouse-640.webp 640w, assets/opt/warehouse-900.webp 900w, assets/opt/warehouse-1200.webp 1200w" sizes="(min-width: 1024px) 46vw, 92vw">
+              <img src="assets/warehouse.jpg" alt="자원 보관 물류 창고" width="1200" height="800" loading="lazy">
+            </picture>
             <figcaption data-i18n="about.cap">APEX 탄게랑 현지와 VL 인천 거점을 함께 활용합니다.</figcaption>
           </figure>
         </div>
@@ -649,7 +692,10 @@
           <div class="product-grid">
             <article class="product-card product-showroom reveal" id="copper" data-tone="copper">
               <figure class="product-visual">
-                <img src="assets/copper-scrap.jpg" alt="밝은 구리 스크랩과 동파이프" width="1200" height="900" loading="lazy">
+                <picture>
+                  <source type="image/webp" srcset="assets/opt/copper-scrap-400.webp 400w, assets/opt/copper-scrap-640.webp 640w, assets/opt/copper-scrap-900.webp 900w, assets/opt/copper-scrap-1200.webp 1200w" sizes="(min-width: 1024px) 46vw, 92vw">
+                  <img src="assets/copper-scrap.jpg" alt="밝은 구리 스크랩과 동파이프" width="1200" height="800" loading="lazy">
+                </picture>
                 <figcaption class="showroom-overlay">
                   <p class="showroom-kicker" data-i18n="hall.res.kicker">Resources Digital Showroom</p>
                   <ul class="spec-badges">
@@ -705,7 +751,10 @@
 
             <article class="product-card product-showroom reveal" id="aluminum" data-tone="aluminum">
               <figure class="product-visual">
-                <img src="assets/aluminum-ingot.jpg" alt="적재된 알루미늄 잉곳" width="1200" height="900" loading="lazy">
+                <picture>
+                  <source type="image/webp" srcset="assets/opt/aluminum-ingot-400.webp 400w, assets/opt/aluminum-ingot-640.webp 640w, assets/opt/aluminum-ingot-900.webp 900w, assets/opt/aluminum-ingot-1200.webp 1200w" sizes="(min-width: 1024px) 46vw, 92vw">
+                  <img src="assets/aluminum-ingot.jpg" alt="적재된 알루미늄 잉곳" width="1200" height="800" loading="lazy">
+                </picture>
                 <figcaption class="showroom-overlay">
                   <p class="showroom-kicker" data-i18n="hall.res.kicker">Resources Digital Showroom</p>
                   <ul class="spec-badges">
@@ -761,7 +810,10 @@
 
             <article class="product-card product-showroom reveal" id="dross" data-tone="dross">
               <figure class="product-visual">
-                <img src="assets/aluminum-dross.jpg" alt="알루미늄 드로스 회수 원료" width="1200" height="900" loading="lazy">
+                <picture>
+                  <source type="image/webp" srcset="assets/opt/aluminum-dross-400.webp 400w, assets/opt/aluminum-dross-640.webp 640w, assets/opt/aluminum-dross-900.webp 900w, assets/opt/aluminum-dross-1200.webp 1200w" sizes="(min-width: 1024px) 46vw, 92vw">
+                  <img src="assets/aluminum-dross.jpg" alt="알루미늄 드로스 회수 원료" width="1200" height="800" loading="lazy">
+                </picture>
                 <figcaption class="showroom-overlay">
                   <p class="showroom-kicker" data-i18n="hall.res.kicker">Resources Digital Showroom</p>
                   <ul class="spec-badges">
@@ -817,7 +869,10 @@
 
             <article class="product-card product-showroom reveal" id="tin" data-tone="tin">
               <figure class="product-visual">
-                <img src="assets/tin-slag.jpg" alt="주석 제련 슬래그" width="1200" height="900" loading="lazy">
+                <picture>
+                  <source type="image/webp" srcset="assets/opt/tin-slag-400.webp 400w, assets/opt/tin-slag-640.webp 640w, assets/opt/tin-slag-900.webp 900w, assets/opt/tin-slag-1200.webp 1200w" sizes="(min-width: 1024px) 46vw, 92vw">
+                  <img src="assets/tin-slag.jpg" alt="주석 제련 슬래그" width="1200" height="800" loading="lazy">
+                </picture>
                 <figcaption class="showroom-overlay">
                   <p class="showroom-kicker" data-i18n="hall.res.kicker">Resources Digital Showroom</p>
                   <ul class="spec-badges">
@@ -873,7 +928,10 @@
 
             <article class="product-card product-showroom reveal" id="nickel" data-tone="nickel">
               <figure class="product-visual">
-                <img src="assets/nickel-slag.jpg" alt="니켈 제련 슬래그" width="1200" height="900" loading="lazy">
+                <picture>
+                  <source type="image/webp" srcset="assets/opt/nickel-slag-400.webp 400w, assets/opt/nickel-slag-640.webp 640w, assets/opt/nickel-slag-900.webp 900w, assets/opt/nickel-slag-1200.webp 1200w" sizes="(min-width: 1024px) 46vw, 92vw">
+                  <img src="assets/nickel-slag.jpg" alt="니켈 제련 슬래그" width="1200" height="800" loading="lazy">
+                </picture>
                 <figcaption class="showroom-overlay">
                   <p class="showroom-kicker" data-i18n="hall.res.kicker">Resources Digital Showroom</p>
                   <ul class="spec-badges">
@@ -929,7 +987,10 @@
 
             <article class="product-card product-showroom reveal" id="wood" data-tone="wood">
               <figure class="product-visual">
-                <img src="assets/wood-pellets.jpg" alt="산업용 우드펠릿" width="1200" height="900" loading="lazy">
+                <picture>
+                  <source type="image/webp" srcset="assets/opt/wood-pellets-400.webp 400w, assets/opt/wood-pellets-640.webp 640w, assets/opt/wood-pellets-900.webp 900w, assets/opt/wood-pellets-1200.webp 1200w" sizes="(min-width: 1024px) 46vw, 92vw">
+                  <img src="assets/wood-pellets.jpg" alt="산업용 우드펠릿" width="1200" height="800" loading="lazy">
+                </picture>
                 <figcaption class="showroom-overlay">
                   <p class="showroom-kicker" data-i18n="hall.res.kicker">Resources Digital Showroom</p>
                   <ul class="spec-badges">
@@ -985,7 +1046,10 @@
 
             <article class="product-card product-wide product-showroom reveal" id="kaolin" data-tone="kaolin" data-gallery>
               <figure class="product-visual">
-                <img data-gallery-main src="assets/kaolin-noodle.jpg" alt="카올린 누들 원료" width="1200" height="900" loading="lazy" data-i18n-alt="p.kaolin.alt.noodle">
+                <picture>
+                  <source type="image/webp" srcset="assets/opt/kaolin-noodle-400.webp 400w, assets/opt/kaolin-noodle-640.webp 640w, assets/opt/kaolin-noodle-900.webp 900w, assets/opt/kaolin-noodle-1051.webp 1051w" sizes="(min-width: 1024px) 60vw, 92vw">
+                  <img data-gallery-main src="assets/kaolin-noodle.jpg" alt="카올린 누들 원료" width="1051" height="918" loading="lazy" data-i18n-alt="p.kaolin.alt.noodle">
+                </picture>
                 <figcaption class="showroom-overlay">
                   <p class="showroom-kicker" data-i18n="p.kaolin.showroom">대표 규격</p>
                   <ul class="spec-badges">
@@ -1009,17 +1073,29 @@
                 </figcaption>
               </figure>
               <div class="product-thumbs" role="group" data-i18n-aria="p.kaolin.gallery">
-                <button type="button" class="is-active" data-gallery-src="assets/kaolin-noodle.jpg" data-i18n-gallery-alt="p.kaolin.alt.noodle" data-i18n-aria="p.kaolin.thumb.noodle">
-                  <img src="assets/kaolin-noodle.jpg" alt="" width="400" height="300">
+                <button type="button" class="is-active" data-gallery-src="assets/kaolin-noodle.jpg" data-gallery-srcset="assets/opt/kaolin-noodle-400.webp 400w, assets/opt/kaolin-noodle-640.webp 640w, assets/opt/kaolin-noodle-900.webp 900w, assets/opt/kaolin-noodle-1051.webp 1051w" data-i18n-gallery-alt="p.kaolin.alt.noodle" data-i18n-aria="p.kaolin.thumb.noodle">
+                  <picture>
+                    <source type="image/webp" srcset="assets/opt/kaolin-noodle-400.webp 400w, assets/opt/kaolin-noodle-640.webp 640w, assets/opt/kaolin-noodle-900.webp 900w, assets/opt/kaolin-noodle-1051.webp 1051w" sizes="120px">
+                    <img src="assets/kaolin-noodle.jpg" alt="" width="1051" height="918">
+                  </picture>
                 </button>
-                <button type="button" data-gallery-src="assets/kaolin.jpg" data-i18n-gallery-alt="p.kaolin.alt.lump" data-i18n-aria="p.kaolin.thumb.lump">
-                  <img src="assets/kaolin.jpg" alt="" width="400" height="300">
+                <button type="button" data-gallery-src="assets/kaolin.jpg" data-gallery-srcset="assets/opt/kaolin-400.webp 400w, assets/opt/kaolin-640.webp 640w, assets/opt/kaolin-900.webp 900w, assets/opt/kaolin-1025.webp 1025w" data-i18n-gallery-alt="p.kaolin.alt.lump" data-i18n-aria="p.kaolin.thumb.lump">
+                  <picture>
+                    <source type="image/webp" srcset="assets/opt/kaolin-400.webp 400w, assets/opt/kaolin-640.webp 640w, assets/opt/kaolin-900.webp 900w, assets/opt/kaolin-1025.webp 1025w" sizes="120px">
+                    <img src="assets/kaolin.jpg" alt="" width="1025" height="795">
+                  </picture>
                 </button>
-                <button type="button" data-gallery-src="assets/kaolin-powder.jpg" data-i18n-gallery-alt="p.kaolin.alt.powder" data-i18n-aria="p.kaolin.thumb.powder">
-                  <img src="assets/kaolin-powder.jpg" alt="" width="400" height="300">
+                <button type="button" data-gallery-src="assets/kaolin-powder.jpg" data-gallery-srcset="assets/opt/kaolin-powder-400.webp 400w, assets/opt/kaolin-powder-640.webp 640w, assets/opt/kaolin-powder-900.webp 900w, assets/opt/kaolin-powder-1003.webp 1003w" data-i18n-gallery-alt="p.kaolin.alt.powder" data-i18n-aria="p.kaolin.thumb.powder">
+                  <picture>
+                    <source type="image/webp" srcset="assets/opt/kaolin-powder-400.webp 400w, assets/opt/kaolin-powder-640.webp 640w, assets/opt/kaolin-powder-900.webp 900w, assets/opt/kaolin-powder-1003.webp 1003w" sizes="120px">
+                    <img src="assets/kaolin-powder.jpg" alt="" width="1003" height="857">
+                  </picture>
                 </button>
-                <button type="button" data-gallery-src="assets/kaolin-mine.jpg" data-i18n-gallery-alt="p.kaolin.alt.mine" data-i18n-aria="p.kaolin.thumb.mine">
-                  <img src="assets/kaolin-mine.jpg" alt="" width="400" height="300">
+                <button type="button" data-gallery-src="assets/kaolin-mine.jpg" data-gallery-srcset="assets/opt/kaolin-mine-400.webp 400w, assets/opt/kaolin-mine-640.webp 640w, assets/opt/kaolin-mine-900.webp 900w, assets/opt/kaolin-mine-1046.webp 1046w" data-i18n-gallery-alt="p.kaolin.alt.mine" data-i18n-aria="p.kaolin.thumb.mine">
+                  <picture>
+                    <source type="image/webp" srcset="assets/opt/kaolin-mine-400.webp 400w, assets/opt/kaolin-mine-640.webp 640w, assets/opt/kaolin-mine-900.webp 900w, assets/opt/kaolin-mine-1046.webp 1046w" sizes="120px">
+                    <img src="assets/kaolin-mine.jpg" alt="" width="1046" height="590">
+                  </picture>
                 </button>
               </div>
               <div class="product-body">
@@ -1089,7 +1165,10 @@
           <div class="product-grid">
             <article class="product-card product-wide product-showroom reveal" id="eboard" data-tone="eboard">
               <figure class="product-visual">
-                <img src="assets/electronic-board.jpg" alt="전자칠판 전자교탁 인터랙티브 디스플레이" width="1200" height="900" loading="lazy">
+                <picture>
+                  <source type="image/webp" srcset="assets/opt/electronic-board-400.webp 400w, assets/opt/electronic-board-640.webp 640w, assets/opt/electronic-board-900.webp 900w, assets/opt/electronic-board-1200.webp 1200w" sizes="(min-width: 1024px) 46vw, 92vw">
+                  <img src="assets/electronic-board.jpg" alt="전자칠판 전자교탁 인터랙티브 디스플레이" width="1200" height="900" loading="lazy">
+                </picture>
                 <figcaption class="showroom-overlay">
                   <p class="showroom-kicker" data-i18n="p.eboard.showroom">Digital Showroom</p>
                   <ul class="spec-badges">
@@ -1173,7 +1252,10 @@
 
             <article class="product-card product-wide product-showroom reveal" id="ops" data-tone="ops">
               <figure class="product-visual">
-                <img src="assets/ops-pc.jpg" alt="OPS 슬롯형 PC 모듈" width="1200" height="900" loading="lazy">
+                <picture>
+                  <source type="image/webp" srcset="assets/opt/ops-pc-400.webp 400w, assets/opt/ops-pc-640.webp 640w, assets/opt/ops-pc-900.webp 900w, assets/opt/ops-pc-1200.webp 1200w" sizes="(min-width: 1024px) 46vw, 92vw">
+                  <img src="assets/ops-pc.jpg" alt="OPS 슬롯형 PC 모듈" width="1200" height="900" loading="lazy">
+                </picture>
                 <figcaption class="showroom-overlay">
                   <p class="showroom-kicker" data-i18n="hall.ele.kicker">Electronics Digital Showroom</p>
                   <ul class="spec-badges">
@@ -1240,7 +1322,10 @@
 
             <article class="product-card product-wide product-showroom reveal" id="laptop" data-tone="laptop">
               <figure class="product-visual">
-                <img src="assets/laptop.jpg" alt="업무용 노트북" width="1200" height="900" loading="lazy">
+                <picture>
+                  <source type="image/webp" srcset="assets/opt/laptop-400.webp 400w, assets/opt/laptop-640.webp 640w, assets/opt/laptop-900.webp 900w, assets/opt/laptop-1200.webp 1200w" sizes="(min-width: 1024px) 46vw, 92vw">
+                  <img src="assets/laptop.jpg" alt="업무용 노트북" width="1200" height="900" loading="lazy">
+                </picture>
                 <figcaption class="showroom-overlay">
                   <p class="showroom-kicker" data-i18n="hall.ele.kicker">Electronics Digital Showroom</p>
                   <ul class="spec-badges">
@@ -1307,7 +1392,10 @@
 
             <article class="product-card product-wide product-showroom reveal" id="tablet" data-tone="tablet">
               <figure class="product-visual">
-                <img src="assets/tablet.jpg" alt="교육용 태블릿PC" width="1200" height="900" loading="lazy">
+                <picture>
+                  <source type="image/webp" srcset="assets/opt/tablet-400.webp 400w, assets/opt/tablet-640.webp 640w, assets/opt/tablet-900.webp 900w, assets/opt/tablet-1200.webp 1200w" sizes="(min-width: 1024px) 46vw, 92vw">
+                  <img src="assets/tablet.jpg" alt="교육용 태블릿PC" width="1200" height="900" loading="lazy">
+                </picture>
                 <figcaption class="showroom-overlay">
                   <p class="showroom-kicker" data-i18n="hall.ele.kicker">Electronics Digital Showroom</p>
                   <ul class="spec-badges">
@@ -1374,7 +1462,10 @@
 
             <article class="product-card product-wide product-showroom reveal" id="drone" data-tone="drone">
               <figure class="product-visual">
-                <img src="assets/agricultural-drone.jpg" alt="농업용 방제 드론" width="1200" height="900" loading="lazy">
+                <picture>
+                  <source type="image/webp" srcset="assets/opt/agricultural-drone-400.webp 400w, assets/opt/agricultural-drone-640.webp 640w, assets/opt/agricultural-drone-900.webp 900w, assets/opt/agricultural-drone-1200.webp 1200w" sizes="(min-width: 1024px) 46vw, 92vw">
+                  <img src="assets/agricultural-drone.jpg" alt="농업용 방제 드론" width="1200" height="800" loading="lazy">
+                </picture>
                 <figcaption class="showroom-overlay">
                   <p class="showroom-kicker" data-i18n="p.drone.showroom">Digital Showroom</p>
                   <ul class="spec-badges">
@@ -1557,7 +1648,10 @@
 
     <section class="section process" id="process">
       <div class="process-bg" aria-hidden="true">
-        <img src="assets/hero-port.jpg" alt="" width="1920" height="1080" loading="lazy">
+        <picture>
+          <source type="image/webp" srcset="assets/opt/hero-port-640.webp 640w, assets/opt/hero-port-1024.webp 1024w, assets/opt/hero-port-1440.webp 1440w, assets/opt/hero-port-1536.webp 1536w" sizes="100vw">
+          <img src="assets/hero-port.jpg" alt="" width="1536" height="1024" loading="lazy">
+        </picture>
       </div>
       <div class="container">
         <div class="section-head light">

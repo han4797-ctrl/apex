@@ -57,6 +57,7 @@ body {
 body.is-menu-open { overflow: hidden; }
 
 img { max-width: 100%; display: block; }
+picture { display: contents; }
 a { color: inherit; text-decoration: none; }
 address { font-style: normal; }
 button, input, select, textarea { font: inherit; color: inherit; }
@@ -132,13 +133,20 @@ ul, ol { list-style: none; }
   display: flex;
   align-items: center;
   gap: 10px;
-  flex-shrink: 0;
+  min-width: 0;
 }
 .brand img { width: 40px; height: 40px; }
 .brand-text {
   display: flex;
   flex-direction: column;
   line-height: 1.15;
+  min-width: 0;
+}
+.brand-text strong,
+.brand-text small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .brand-text strong {
   font-family: Outfit, Georgia, serif;
@@ -211,6 +219,7 @@ ul, ol { list-style: none; }
   align-items: center;
   gap: 8px;
   margin-left: auto;
+  flex-shrink: 0;
 }
 
 .lang-switch {
@@ -258,7 +267,7 @@ ul, ol { list-style: none; }
   color: var(--navy);
 }
 
-.header-cta { display: none; }
+.header-actions .header-cta { display: none; }
 
 .menu-btn {
   position: relative;
@@ -585,8 +594,8 @@ ul, ol { list-style: none; }
   border-color: var(--navy);
   color: #f4efe6;
 }
-.org-root small { color: var(--gold-2); }
-.org-root span { color: #cfc8bb; }
+.org-card.org-root small { color: var(--gold-2); }
+.org-card.org-root span { color: #cfc8bb; }
 .org-lead { --accent: var(--gold); }
 .org-card small {
   display: block;
@@ -908,7 +917,7 @@ ul, ol { list-style: none; }
   inset: auto 0 0;
   z-index: 1;
   padding: 56px 16px 16px;
-  background: linear-gradient(180deg, transparent 0%, rgba(15, 28, 50, 0.88) 58%);
+  background: linear-gradient(180deg, transparent 0%, rgba(15, 28, 50, 0.62) 30%, rgba(15, 28, 50, 0.9) 62%);
   color: #f4efe6;
   font-style: normal;
 }
@@ -917,7 +926,7 @@ ul, ol { list-style: none; }
   font-size: 12px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--gold-2);
+  color: #f4efe6;
   margin-bottom: 10px;
 }
 .spec-badges {
@@ -1783,7 +1792,6 @@ ul, ol { list-style: none; }
 .hero .eyebrow,
 .process .eyebrow,
 .section-head.light .eyebrow,
-.org-lead small,
 .briefing-cover .briefing-tag,
 .site-footer .eyebrow { color: var(--gold-2); }
 
@@ -1843,6 +1851,10 @@ ul, ol { list-style: none; }
 }
 
 /* ---------- Breakpoints ---------- */
+@media (max-width: 599px) {
+  .brand-text small { display: none; }
+}
+
 @media (max-width: 767px) {
   .hero {
     min-height: 0;
@@ -1896,7 +1908,7 @@ ul, ol { list-style: none; }
 
 @media (min-width: 768px) {
   .doc-toc { grid-template-columns: 1fr 1fr; }
-  .header-cta { display: inline-flex; }
+  .header-actions .header-cta { display: inline-flex; }
   .strip-grid { grid-template-columns: 1fr 1fr; }
   .strip article {
     padding: 32px 24px;
