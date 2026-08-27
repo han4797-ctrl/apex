@@ -633,7 +633,7 @@ const i18n = {
     "bgm.play": "배경음악 재생",
     "bgm.pause": "배경음악 끄기",
     "bgm.title": "배경음악",
-    "bgm.credit": "Crusade · Kevin MacLeod (CC BY)"
+    "bgm.credit": "배경 테마"
   },
   en: {
     skip: "Skip to content",
@@ -1266,7 +1266,7 @@ const i18n = {
     "bgm.play": "Play background music",
     "bgm.pause": "Stop background music",
     "bgm.title": "Background music",
-    "bgm.credit": "Crusade · Kevin MacLeod (CC BY)"
+    "bgm.credit": "Homepage theme"
   },
   id: {
     skip: "Lewati ke isi",
@@ -1899,7 +1899,7 @@ const i18n = {
     "bgm.play": "Putar musik latar",
     "bgm.pause": "Hentikan musik latar",
     "bgm.title": "Musik latar",
-    "bgm.credit": "Crusade · Kevin MacLeod (CC BY)"
+    "bgm.credit": "Tema situs"
   }
 };
 
