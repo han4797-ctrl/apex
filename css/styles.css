@@ -376,7 +376,7 @@ ul, ol { list-style: none; }
 }
 .hero h1 {
   font-family: Outfit, Pretendard, serif;
-  font-size: clamp(36px, 9vw, 76px);
+  font-size: clamp(32px, 7.2vw, 60px);
   line-height: 1.12;
   font-weight: 700;
   letter-spacing: -0.02em;
