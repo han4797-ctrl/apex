@@ -1,4 +1,4 @@
-/* APEX — PT. APEX TELCOM INKO
+/* PT. APEX TELCOM INKO · APEX HOLDINGS
    Palette: ocean navy · parchment · antique gold
    Type: Pretendard (body) · Noto Serif KR / Cinzel (display)
    Layout: mobile-first Flexbox / Grid */
@@ -154,15 +154,16 @@ ul, ol { list-style: none; }
   white-space: nowrap;
 }
 .brand-text strong {
-  font-family: Cinzel, Outfit, Georgia, serif;
-  font-size: 21px;
-  letter-spacing: 0.12em;
+  font-family: Outfit, Pretendard, sans-serif;
+  font-size: clamp(11px, 2.5vw, 14px);
+  font-weight: 700;
+  letter-spacing: 0.04em;
   color: #f4efe6;
   transition: color 0.2s;
 }
 .brand-text small {
   font-size: 10px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: rgba(244, 239, 230, 0.7);
   transition: color 0.2s;
@@ -415,6 +416,14 @@ ul, ol { list-style: none; }
   text-transform: uppercase;
   margin-bottom: 14px;
 }
+.hero .eyebrow {
+  font-family: Outfit, Pretendard, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  line-height: 1.45;
+  max-width: 36em;
+}
 .hero h1,
 .section-head h2,
 .about h2 {
@@ -439,7 +448,7 @@ ul, ol { list-style: none; }
   margin-top: 40px;
   padding-top: 24px;
   border-top: 1px solid rgba(228, 197, 106, 0.28);
-  max-width: 560px;
+  max-width: 720px;
 }
 .hero-stats strong {
   display: block;
@@ -448,6 +457,13 @@ ul, ol { list-style: none; }
   line-height: 1;
   margin-bottom: 6px;
   letter-spacing: 0.06em;
+}
+.hero-stats .hero-stat-name {
+  font-family: Outfit, Pretendard, sans-serif;
+  font-size: clamp(13px, 2.2vw, 16px);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.25;
 }
 .hero-stats span { font-size: 13px; color: #cfc8bb; }
 
@@ -529,6 +545,12 @@ ul, ol { list-style: none; }
   margin-bottom: 8px;
 }
 .strip h3 { font-size: 18px; margin-bottom: 4px; }
+.strip h3.company-heading {
+  font-family: Outfit, Pretendard, sans-serif;
+  font-size: 15px;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
 .strip p { color: var(--muted); font-size: 14px; }
 .strip.is-voyage {
   background: var(--navy);
@@ -640,6 +662,7 @@ ul, ol { list-style: none; }
   border-top: 4px solid var(--accent, var(--gold));
   border-radius: 14px;
 }
+.org-card.org-root { max-width: 380px; }
 .org-root {
   --accent: var(--navy);
   background: var(--navy);
@@ -664,7 +687,7 @@ ul, ol { list-style: none; }
   font-size: 18px;
   line-height: 1.3;
 }
-.org-root strong { color: #f4efe6; font-family: Outfit, Pretendard, serif; font-size: 24px; }
+.org-root strong { color: #f4efe6; font-family: Outfit, Pretendard, sans-serif; font-size: 16px; letter-spacing: 0.03em; }
 .org-card span {
   display: block;
   margin-top: 4px;
@@ -793,6 +816,14 @@ ul, ol { list-style: none; }
   margin-bottom: 4px;
 }
 .division h3 { font-size: 20px; margin-bottom: 6px; }
+.division h3.company-heading,
+.contact-desk h3.company-heading,
+.org-card .company-heading {
+  font-family: Outfit, Pretendard, sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
 .division p { color: var(--muted); font-size: 14px; }
 .division .text-link { display: inline-block; margin-top: 12px; font-size: 14px; }
 
@@ -1471,6 +1502,11 @@ ul, ol { list-style: none; }
   line-height: 1.2;
   pointer-events: none;
 }
+.map-pin.is-hub .map-pin-card,
+.map-pin.is-korea .map-pin-card {
+  white-space: normal;
+  max-width: 168px;
+}
 .map-pin-card strong {
   display: block;
   font-size: 12px;
@@ -1928,8 +1964,8 @@ ul, ol { list-style: none; }
 .contact-desk:not(.is-front) .contact-desk-kicker { color: var(--slate); }
 .contact-desk h3 {
   font-family: Outfit, Pretendard, sans-serif;
-  font-size: 20px;
-  line-height: 1.25;
+  font-size: 18px;
+  line-height: 1.3;
   color: var(--navy);
   margin-bottom: 4px;
 }
@@ -2383,9 +2419,9 @@ ul, ol { list-style: none; }
 
 /* ---------- Breakpoints ---------- */
 @media (max-width: 599px) {
-  .brand-text small { display: none; }
   .bgm-meta { display: none; }
   .bgm { padding: 8px; }
+  .brand-text strong { font-size: 11px; letter-spacing: 0.02em; }
 }
 
 @media (max-width: 767px) {
@@ -2408,6 +2444,7 @@ ul, ol { list-style: none; }
     padding-top: 16px;
   }
   .hero-stats strong { font-size: 20px; }
+  .hero-stats .hero-stat-name { font-size: 12px; }
   .hero-stats span { font-size: 11px; }
   .materials { grid-auto-rows: 132px; }
   .strip article { padding: 18px 4px; }
@@ -2431,7 +2468,7 @@ ul, ol { list-style: none; }
 
 @media (min-width: 640px) {
   .container { width: min(1180px, calc(100% - 40px)); }
-  .hero-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .hero-stats { grid-template-columns: 0.55fr 1.5fr 1.15fr; gap: 18px; }
   .materials { grid-auto-rows: 240px; }
   .material strong { font-size: 16px; }
   .facts { grid-template-columns: repeat(2, 1fr); }
@@ -2573,6 +2610,7 @@ ul, ol { list-style: none; }
   .site-header.is-scrolled .nav a::after { background: var(--gold); }
   .header-actions { margin-left: 0; }
   .header-inner { gap: 28px; }
+  .brand { flex: 0 1 auto; }
 
   .hero-inner {
     max-width: 760px;
@@ -2647,6 +2685,13 @@ ul, ol { list-style: none; }
   .materials {
     grid-template-columns: repeat(6, 1fr);
   }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .header-inner { gap: 14px; }
+  .nav { gap: 12px; }
+  .nav a { font-size: 13px; }
+  .brand-text strong { font-size: 12px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
