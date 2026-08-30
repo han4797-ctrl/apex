@@ -739,9 +739,10 @@ ul, ol { list-style: none; }
   grid-template-columns: 1fr;
   gap: 12px;
   justify-items: center;
-  max-width: 640px;
+  max-width: 420px;
   margin: 0 auto;
 }
+.org-partners-3 { max-width: 960px; }
 .org-partners .org-card { width: 100%; max-width: none; }
 .org-card em {
   display: block;
@@ -810,6 +811,10 @@ ul, ol { list-style: none; }
   border-left: 4px solid var(--accent, var(--gold));
   border-radius: 16px;
   padding: 20px;
+}
+.division.is-front {
+  background: linear-gradient(180deg, var(--gold-soft), var(--white) 48px);
+  box-shadow: 0 0 0 1px rgba(196, 154, 58, 0.22);
 }
 .division-en {
   font-family: Outfit, serif;
@@ -1348,6 +1353,10 @@ ul, ol { list-style: none; }
   border: 1px solid var(--line);
   border-left: 4px solid var(--gold);
   border-radius: 14px;
+}
+.mfr-card.is-front {
+  background: linear-gradient(180deg, var(--gold-soft), var(--paper) 42px);
+  box-shadow: 0 0 0 1px rgba(196, 154, 58, 0.2);
 }
 .mfr-card h5 {
   margin: 2px 0 8px;
@@ -2497,7 +2506,8 @@ ul, ol { list-style: none; }
   .materials { grid-auto-rows: 240px; }
   .material strong { font-size: 16px; }
   .facts { grid-template-columns: repeat(2, 1fr); }
-  .org-partners { grid-template-columns: 1fr 1fr; }
+  .org-partners { grid-template-columns: 1fr; }
+  .org-partners-3 { grid-template-columns: 1fr; }
   .about-photo img { height: 280px; }
   .about-profile { margin-top: 56px; }
   .org-wrap { margin-top: 56px; }
@@ -2522,6 +2532,7 @@ ul, ol { list-style: none; }
   .strip article:nth-child(2n) { border-right: 0; }
   .strip.is-voyage article { border-color: rgba(228, 197, 106, 0.18); }
   .divisions { grid-template-columns: 1fr 1fr; }
+  .divisions-roles { grid-template-columns: 1fr 1fr; }
   .principles { grid-template-columns: repeat(3, 1fr); }
   .org-branches {
     grid-template-columns: repeat(3, 1fr);
@@ -2593,6 +2604,10 @@ ul, ol { list-style: none; }
 }
 
 @media (min-width: 1024px) {
+  .divisions-roles,
+  .mfr-split,
+  .mfr-contacts,
+  .contact-desks { grid-template-columns: 1fr 1fr; }
   .menu-btn,
   .nav-overlay { display: none; }
 
