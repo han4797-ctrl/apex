@@ -735,15 +735,14 @@ ul, ol { list-style: none; }
   color: var(--muted);
 }
 .org-partners {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-  justify-items: center;
-  max-width: 420px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 .org-partners-3 { max-width: 960px; }
-.org-partners .org-card { width: 100%; max-width: none; }
+.org-partners .org-card {
+  width: auto;
+  max-width: 380px;
+}
 .org-card em {
   display: block;
   margin-top: 4px;
