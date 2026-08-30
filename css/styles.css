@@ -163,10 +163,14 @@ ul, ol { list-style: none; }
 }
 .brand-text small {
   font-size: 10px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: rgba(244, 239, 230, 0.7);
   transition: color 0.2s;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  line-height: 1.25;
 }
 .site-header.is-scrolled .brand-text strong,
 .site-header.is-open .brand-text strong { color: var(--ink); }
@@ -2004,6 +2008,27 @@ ul, ol { list-style: none; }
   word-break: keep-all;
 }
 .contact-list a:hover { color: var(--gold-ink); }
+.contact-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+.contact-stack small {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.contact-stack a,
+.contact-stack address {
+  font-size: 16px;
+  font-weight: 650;
+  line-height: 1.4;
+}
 .addr-en {
   margin-top: 16px;
   color: var(--muted);
