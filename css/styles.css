@@ -1000,13 +1000,13 @@ ul, ol { list-style: none; }
 }
 .product-body h3 { font-size: 24px; margin-bottom: 10px; color: var(--navy); }
 .product-body p { color: var(--muted); }
-.product-body ul:not(.embark-swatches) {
+.product-body ul {
   margin-top: 16px;
   padding-left: 18px;
   list-style: disc;
   color: var(--ink);
 }
-.product-body ul:not(.embark-swatches) li + li { margin-top: 4px; }
+.product-body li + li { margin-top: 4px; }
 
 .product-showroom .product-visual {
   position: relative;
@@ -1210,35 +1210,6 @@ ul, ol { list-style: none; }
 [data-tone="armuzna"] { --accent: var(--armuzna); }
 [data-tone="luggage"] { --accent: var(--luggage); }
 
-.embark-swatches {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px;
-  margin: 16px 0 4px;
-}
-.embark-swatches li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  min-width: 0;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--muted);
-}
-.embark-swatches li::before {
-  content: "";
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--sw);
-  box-shadow: 0 0 0 1px rgba(7, 21, 37, 0.14);
-  flex-shrink: 0;
-}
-.embark-note {
-  margin-top: 8px;
-  color: var(--muted);
-  font-size: 13px;
-}
 
 /* ---------- Resources briefing ---------- */
 .briefing { background: var(--paper); }
@@ -2582,7 +2553,6 @@ ul, ol { list-style: none; }
   .org-branch {
     position: relative;
   }
-  .embark-swatches { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .org-board { padding: 36px 28px 28px; }
   .product-grid { grid-template-columns: repeat(2, 1fr); }
   .product-wide { grid-template-columns: 1fr; }
@@ -2725,7 +2695,6 @@ ul, ol { list-style: none; }
     height: 22px;
     background: var(--gold);
   }
-  .embark-swatches { grid-template-columns: repeat(8, minmax(0, 1fr)); }
 
   .tabs,
   .sheet-tabs {
