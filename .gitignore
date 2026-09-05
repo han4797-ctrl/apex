@@ -4,8 +4,5 @@ Desktop.ini
 *.tmp
 vlmc-*
 
-# 비공개 배포 문서 - 문의 후 개별 배포 정책
+# 배포 문서 - 문의 후 개별 배포 정책
 assets/docs/*
-# 공개 의도된 제조사 파트너 브리프만 예외
-!assets/docs/apex-manufacturer-partner-brief.pdf
-!assets/docs/apex-manufacturer-partner-brief-ko.pdf
