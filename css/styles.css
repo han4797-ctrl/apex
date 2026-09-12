@@ -23,6 +23,7 @@
   --tin: #6f8078;
   --nickel: #627078;
   --wood: #8a5a32;
+  --diesel: #9a7a32;
   --kaolin: #b8a78a;
   --eboard: #35608f;
   --ops: #4a7089;
@@ -1197,6 +1198,7 @@ ul, ol { list-style: none; }
 [data-tone="tin"] { --accent: var(--tin); }
 [data-tone="nickel"] { --accent: var(--nickel); }
 [data-tone="wood"] { --accent: var(--wood); }
+[data-tone="diesel"] { --accent: var(--diesel); }
 [data-tone="kaolin"] { --accent: var(--kaolin); }
 [data-tone="eboard"] { --accent: var(--eboard); }
 [data-tone="ops"] { --accent: var(--ops); }
@@ -1485,6 +1487,7 @@ ul, ol { list-style: none; }
 .map-pin.is-korea .map-pin-dot { background: var(--slate); }
 .map-pin.is-aluminum .map-pin-dot { background: #c5d0d8; }
 .map-pin.is-wood .map-pin-dot { background: #7a9a4e; }
+.map-pin.is-diesel .map-pin-dot { background: #c4a056; }
 .map-pin.is-coal .map-pin-dot { background: #c4a056; }
 .map-pin.is-copper .map-pin-dot { background: #c47a3a; }
 .map-pin.is-nickel .map-pin-dot { background: #5f9e8e; }
@@ -1549,6 +1552,7 @@ ul, ol { list-style: none; }
 }
 .map-pin.is-aluminum .map-pin-card em { color: #d5dde3; }
 .map-pin.is-wood .map-pin-card em { color: #c5d989; }
+.map-pin.is-diesel .map-pin-card em { color: #e0c07a; }
 .map-pin.is-coal .map-pin-card em { color: #e0c07a; }
 .map-pin.is-copper .map-pin-card em { color: #e09a5a; }
 .map-pin.is-nickel .map-pin-card em { color: #8fc9b8; }
@@ -2568,7 +2572,7 @@ ul, ol { list-style: none; }
   }
   .briefing-body { padding: 32px; }
   .briefing-stats { grid-template-columns: repeat(4, 1fr); gap: 18px; }
-  .briefing-market { grid-template-columns: 1fr 1fr; }
+  .briefing-market { grid-template-columns: repeat(3, 1fr); }
   .briefing-steps { grid-template-columns: 1fr 1fr; }
   .mfr-split,
   .mfr-contacts { grid-template-columns: 1fr 1fr; }
@@ -2772,4 +2776,132 @@ ul, ol { list-style: none; }
   .track-progress span { transition: none; }
   .track-samples.is-hint .track-chip { animation: none; }
   .bgm:not(.is-playing) .bgm-btn { animation: none; }
+}
+
+/* ---------- Print / A4 PDF ---------- */
+@page {
+  size: A4 portrait;
+  margin: 12mm 11mm 14mm;
+}
+
+@media print {
+  html {
+    scroll-behavior: auto;
+    scroll-padding-top: 0;
+  }
+
+  body {
+    background-image: none;
+    background-color: #fff;
+    color: #1c140c;
+    font-size: 11pt;
+    line-height: 1.5;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .skip-link,
+  .menu-btn,
+  .nav,
+  .nav-overlay,
+  .lang-switch,
+  .header-cta,
+  .hero-cta,
+  .hero-chart,
+  .hero-compass,
+  .bgm,
+  .inquiry-form,
+  .track-form,
+  .track-samples,
+  .track-hud,
+  .track-layer,
+  .footer-top,
+  .product-thumbs,
+  .product-cta,
+  [data-intent="catalog"],
+  a[download] {
+    display: none !important;
+  }
+
+  .site-header {
+    position: static;
+    height: auto;
+    background: #f3ead6;
+    border-bottom: 1px solid #ddd2bb;
+    box-shadow: none;
+  }
+  .site-header::before {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #c9a227, #071525);
+  }
+  .brand-text strong,
+  .brand-text small {
+    color: #1c140c !important;
+    white-space: normal;
+  }
+
+  .hero {
+    min-height: 0;
+    height: 92mm;
+    break-after: page;
+  }
+  .hero-media img {
+    animation: none;
+    transform: none;
+  }
+  .hero-inner { padding: 28mm 0 10mm; }
+  .hero .eyebrow { color: #e4c56a; }
+
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .tab-panel[hidden],
+  .profile-sheet[hidden] {
+    display: block !important;
+  }
+
+  .tabs,
+  .sheet-tabs {
+    display: none;
+  }
+
+  #panel-electronic,
+  #panel-luggage,
+  #sheet-briefing,
+  #sheet-mfr {
+    break-before: page;
+  }
+
+  .section { padding: 18mm 0; }
+  .container { width: 100%; }
+
+  .product-card,
+  .contact-desk,
+  .material,
+  .org-card,
+  .step {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .product-visual img,
+  .product-wide .product-visual img,
+  .product-wide.product-showroom .product-visual img {
+    height: 58mm;
+    min-height: 0;
+    object-fit: cover;
+  }
+
+  .materials { grid-auto-rows: 42mm; }
+  .about-photo img { height: 52mm; }
+  .network-map { break-inside: avoid; }
+
+  a { text-decoration: none; color: inherit; }
 }
