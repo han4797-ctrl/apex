@@ -250,8 +250,10 @@ ul, ol { list-style: none; }
   overflow: hidden;
 }
 .lang-toggle {
-  width: 36px;
+  min-width: 34px;
+  width: auto;
   height: 36px;
+  padding: 0 8px;
   border: 0;
   border-radius: 0;
   background: transparent;
@@ -2440,7 +2442,7 @@ ul, ol { list-style: none; }
 /* ---------- Breakpoints ---------- */
 @media (max-width: 599px) {
   .brand-text strong { font-size: 10.5px; letter-spacing: 0.01em; }
-  .lang-toggle { width: 32px; height: 32px; font-size: 10px; }
+  .lang-toggle { min-width: 28px; height: 32px; padding: 0 6px; font-size: 10px; }
   .brand img { width: 34px; height: 34px; }
   .menu-btn { width: 38px; height: 36px; }
 }
