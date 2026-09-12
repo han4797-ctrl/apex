@@ -711,11 +711,7 @@ const i18n = {
     "footer.blurb": "신대륙을 찾듯 산지를 찾아 나섭니다. 현지 주체는 PT. APEX TELCOM INKO, 한국 파트너는 VL M&amp;C · APEX HOLDINGS입니다.",
     "footer.explore": "바로가기",
     "footer.contact": "연락처",
-    "footer.top": "맨 위로",
-    "bgm.play": "배경음악 재생",
-    "bgm.pause": "배경음악 끄기",
-    "bgm.title": "배경음악",
-    "bgm.credit": "배경 테마"
+    "footer.top": "맨 위로"
   },
   en: {
     skip: "Skip to content",
@@ -1426,11 +1422,7 @@ const i18n = {
     "footer.blurb": "We look for origins the way explorers looked for a new world. PT. APEX TELCOM INKO is the local party. The Korea partner is VL M&amp;C · APEX HOLDINGS.",
     "footer.explore": "Explore",
     "footer.contact": "Contact",
-    "footer.top": "Back to top",
-    "bgm.play": "Play background music",
-    "bgm.pause": "Stop background music",
-    "bgm.title": "Background music",
-    "bgm.credit": "Homepage theme"
+    "footer.top": "Back to top"
   },
   id: {
     skip: "Lewati ke isi",
@@ -2141,11 +2133,7 @@ const i18n = {
     "footer.blurb": "Kami mencari asal seperti mencari benua baru. Pihak lokal adalah PT. APEX TELCOM INKO. Mitra Korea adalah VL M&amp;C · APEX HOLDINGS.",
     "footer.explore": "Jelajahi",
     "footer.contact": "Kontak",
-    "footer.top": "Kembali ke atas",
-    "bgm.play": "Putar musik latar",
-    "bgm.pause": "Hentikan musik latar",
-    "bgm.title": "Musik latar",
-    "bgm.credit": "Tema situs"
+    "footer.top": "Kembali ke atas"
   }
 };
 
@@ -2493,7 +2481,6 @@ function applyLang(next) {
     const value = copy[el.getAttribute("data-i18n-aria")];
     if (value) el.setAttribute("aria-label", value);
   });
-  refreshBgmLabel(copy);
 
   document.querySelectorAll("[data-gallery]").forEach((gallery) => {
     const active = gallery.querySelector("[data-gallery-src].is-active");
@@ -2848,68 +2835,6 @@ document.querySelectorAll("[data-item]").forEach((btn) => {
     form.elements.namedItem("name")?.focus();
   });
 });
-
-/* ---------- Background music ---------- */
-const BGM_KEY = "apex-bgm";
-
-function bgmEls() {
-  return {
-    audio: document.getElementById("bgmAudio"),
-    toggle: document.getElementById("bgmToggle"),
-    root: document.getElementById("bgm")
-  };
-}
-
-function bgmIsPlaying() {
-  const { audio } = bgmEls();
-  return Boolean(audio && !audio.paused);
-}
-
-function refreshBgmLabel(copy) {
-  const { audio, toggle, root } = bgmEls();
-  if (!toggle) return;
-  const dictCopy = copy || dict();
-  const playing = Boolean(audio && !audio.paused);
-  toggle.setAttribute("aria-pressed", String(playing));
-  toggle.setAttribute("aria-label", dictCopy[playing ? "bgm.pause" : "bgm.play"] || "");
-  root?.classList.toggle("is-playing", playing);
-}
-
-async function startBgm() {
-  const { audio } = bgmEls();
-  if (!audio) return false;
-  audio.volume = 0.32;
-  try {
-    await audio.play();
-    localStorage.setItem(BGM_KEY, "on");
-    refreshBgmLabel();
-    return true;
-  } catch {
-    refreshBgmLabel();
-    return false;
-  }
-}
-
-function stopBgm() {
-  bgmEls().audio?.pause();
-  localStorage.setItem(BGM_KEY, "off");
-  refreshBgmLabel();
-}
-
-(function initBgm() {
-  const { audio, toggle } = bgmEls();
-  toggle?.addEventListener("click", () => {
-    if (bgmIsPlaying()) stopBgm();
-    else startBgm();
-  });
-  audio?.addEventListener("pause", () => refreshBgmLabel());
-  audio?.addEventListener("play", () => refreshBgmLabel());
-  if (localStorage.getItem(BGM_KEY) === "on" && !reduceMotion) {
-    startBgm();
-  } else {
-    refreshBgmLabel();
-  }
-})();
 
 (function initPrintLayout() {
   const wantPrint = /(?:^|[?&])print=1(?:&|$)/.test(location.search);
