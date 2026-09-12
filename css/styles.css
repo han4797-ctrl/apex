@@ -537,6 +537,22 @@ ul, ol { list-style: none; }
 .material-break { grid-column: auto; }
 .material.is-electronic small { color: #9dc0e6; }
 .material.is-luggage small { color: var(--gold-2); }
+.material-ai {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--gold);
+  color: var(--navy);
+  font-family: Outfit, Pretendard, sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+}
 
 /* ---------- Strip ---------- */
 .strip {
@@ -1050,6 +1066,11 @@ ul, ol { list-style: none; }
   padding: 10px 12px;
   backdrop-filter: blur(10px);
 }
+.spec-badges li.is-ai {
+  background: rgba(201, 162, 39, 0.32);
+  border-color: var(--gold-2);
+}
+.spec-badges li.is-ai strong { color: var(--gold-2); }
 .spec-badges strong {
   display: block;
   font-family: Outfit, Georgia, serif;
@@ -2459,6 +2480,7 @@ ul, ol { list-style: none; }
   .material span { left: 10px; right: 10px; bottom: 10px; }
   .material strong { font-size: 14px; }
   .material em { letter-spacing: 0.08em; }
+  .material-ai { top: 8px; right: 8px; padding: 2px 7px; font-size: 9px; }
   .tab,
   .sheet-tab {
     padding: 10px 4px;
