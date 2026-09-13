@@ -754,15 +754,6 @@ ul, ol { list-style: none; }
   text-align: center;
 }
 .org-board-embed .org-leaves li { background: var(--white); }
-.org-equal {
-  margin: 0 0 12px;
-  text-align: center;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
 .org-partners {
   display: flex;
   justify-content: center;
