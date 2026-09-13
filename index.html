@@ -32,7 +32,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Noto+Serif+KR:wght@600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20260913d">
+  <link rel="stylesheet" href="css/styles.css?v=20260913e">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -494,34 +494,36 @@
           <h2 data-i18n="org.title">회사 조직도</h2>
           <p class="section-lead" data-i18n="org.lead">현지 주체는 PT. APEX TELCOM INKO입니다. 한국 파트너는 VL M&amp;C · APEX HOLDINGS입니다.</p>
         </div>
-        <div class="org-board">
-          <div class="org-row">
-            <article class="org-card org-root">
-              <small data-i18n="org.company.kicker">Front</small>
-              <strong class="company-heading">PT. APEX TELCOM INKO</strong>
-            </article>
-          </div>
-          <span class="org-stem" aria-hidden="true"></span>
-          <div class="org-partners">
-            <article class="org-card org-partner">
-              <small data-i18n="org.vl.en">Korea</small>
-              <strong class="company-heading">VL M&amp;C · APEX HOLDINGS</strong>
-            </article>
-          </div>
-          <span class="org-stem" aria-hidden="true"></span>
-          <div class="org-branches">
-            <div class="org-branch" data-tone="ops">
-              <article class="org-card">
-                <small data-i18n="org.ops.en">Operations</small>
-                <strong data-i18n="org.ops.t">이원 운영</strong>
+        <div class="org-board is-executive">
+          <div class="org-executive">
+            <div class="org-row">
+              <article class="org-card org-root">
+                <small data-i18n="org.company.kicker">Front</small>
+                <strong class="company-heading">PT. APEX TELCOM INKO</strong>
               </article>
-              <ul class="org-leaves">
+            </div>
+            <span class="org-stem" aria-hidden="true"></span>
+            <div class="org-partners">
+              <article class="org-card org-partner">
+                <small data-i18n="org.vl.en">Korea</small>
+                <strong class="company-heading">VL M&amp;C · APEX HOLDINGS</strong>
+              </article>
+            </div>
+          </div>
+          <span class="org-stem org-stem-long" aria-hidden="true"></span>
+          <div class="org-branches" aria-label="Business lines">
+            <div class="org-branch" data-tone="ops">
+              <article class="org-card org-branch-head">
+                <small data-i18n="org.ops.en">Structure</small>
+                <strong data-i18n="org.ops.t">운영 구조</strong>
+              </article>
+              <ul class="org-leaves is-entities">
                 <li data-i18n="org.ops.1">PT. APEX TELCOM INKO</li>
                 <li data-i18n="org.ops.2">VL M&amp;C · APEX HOLDINGS</li>
               </ul>
             </div>
             <div class="org-branch" data-tone="copper">
-              <article class="org-card">
+              <article class="org-card org-branch-head">
                 <small data-i18n="org.res.en">Resources</small>
                 <strong data-i18n="org.res.t">자원파트</strong>
               </article>
@@ -532,7 +534,7 @@
               </ul>
             </div>
             <div class="org-branch" data-tone="eboard">
-              <article class="org-card">
+              <article class="org-card org-branch-head">
                 <small data-i18n="org.ele.en">Electronics</small>
                 <strong data-i18n="org.ele.t">전자파트</strong>
               </article>
@@ -543,7 +545,7 @@
               </ul>
             </div>
             <div class="org-branch" data-tone="luggage">
-              <article class="org-card">
+              <article class="org-card org-branch-head">
                 <small data-i18n="org.lug.en">Luggage</small>
                 <strong data-i18n="org.lug.t">여행파트</strong>
               </article>
@@ -2705,6 +2707,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20260913d"></script>
+  <script src="js/main.js?v=20260913e"></script>
 </body>
 </html>
