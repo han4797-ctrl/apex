@@ -20,6 +20,7 @@
   --gold-ink: #6b5314;
   --copper: #b87333;
   --concentrate: #b87333;
+  --aluminum: #8a97a4;
   --tin: #6f8078;
   --nickel: #627078;
   --wood: #8a5a32;
@@ -1221,6 +1222,7 @@ ul, ol { list-style: none; }
 
 [data-tone="copper"] { --accent: var(--copper); }
 [data-tone="concentrate"] { --accent: var(--concentrate); }
+[data-tone="aluminum"] { --accent: var(--aluminum); }
 [data-tone="tin"] { --accent: var(--tin); }
 [data-tone="nickel"] { --accent: var(--nickel); }
 [data-tone="wood"] { --accent: var(--wood); }
@@ -1513,6 +1515,7 @@ ul, ol { list-style: none; }
 .map-pin.is-wood .map-pin-dot { background: #7a9a4e; }
 .map-pin.is-diesel .map-pin-dot { background: #c4a056; }
 .map-pin.is-coal .map-pin-dot { background: #c4a056; }
+.map-pin.is-aluminum .map-pin-dot { background: #c5d0d8; }
 .map-pin.is-copper .map-pin-dot { background: #c47a3a; }
 .map-pin.is-nickel .map-pin-dot { background: #5f9e8e; }
 .map-pin-leader {
@@ -1578,6 +1581,7 @@ ul, ol { list-style: none; }
 .map-pin.is-diesel .map-pin-card em { color: #e0c07a; }
 .map-pin.is-coal .map-pin-card em { color: #e0c07a; }
 .map-pin.is-copper .map-pin-card em { color: #e09a5a; }
+.map-pin.is-aluminum .map-pin-card em { color: #d5dde3; }
 .map-pin.is-nickel .map-pin-card em { color: #8fc9b8; }
 .map-pin.is-electronics .map-pin-card em { color: #7eb6de; }
 .map-pin.is-hub .map-pin-card em { color: #9ec9e8; }
