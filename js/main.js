@@ -1,4 +1,4 @@
-const INQUIRY_MAIL = "han4797@gmail.com";
+const INQUIRY_MAIL = "info@apextelcom.com";
 const LANG_KEY = "apex-lang";
 
 const i18n = {
@@ -689,7 +689,7 @@ const i18n = {
     "form.msg": "문의 내용",
     "form.msg.ph": "사양·등급, 예상 수량, 납기 등을 적어 주세요.",
     "form.submit": "메일로 문의 보내기",
-    "form.note": "전송 시 han4797@gmail.com 메일 앱이 열립니다.",
+    "form.note": "전송 시 info@apextelcom.com 메일 앱이 열립니다.",
     "form.error": "성함/회사, 연락처, 문의 내용을 모두 입력해 주세요.",
     "form.mail.subject": "[PT. APEX TELCOM INKO] {item} 문의",
     "form.mail.body": "성함/회사: {name}\n연락처: {contact}\n관심 품목: {item}\n\n{message}",
@@ -1423,7 +1423,7 @@ const i18n = {
     "form.msg": "Message",
     "form.msg.ph": "Spec or grade, expected quantity, lead time, etc.",
     "form.submit": "Open email inquiry",
-    "form.note": "This opens a mail draft to han4797@gmail.com.",
+    "form.note": "This opens a mail draft to info@apextelcom.com.",
     "form.error": "Please fill in name/company, contact, and message.",
     "form.mail.subject": "[PT. APEX TELCOM INKO] Inquiry — {item}",
     "form.mail.body": "Name / company: {name}\nContact: {contact}\nItem: {item}\n\n{message}",
@@ -2191,7 +2191,7 @@ const i18n = {
     "form.msg": "Pesan",
     "form.msg.ph": "Spek atau mutu, kuantitas perkiraan, lead time, dan lain-lain.",
     "form.submit": "Buka email pertanyaan",
-    "form.note": "Ini membuka draf email ke han4797@gmail.com.",
+    "form.note": "Ini membuka draf email ke info@apextelcom.com.",
     "form.error": "Harap isi nama/perusahaan, kontak, dan pesan.",
     "form.mail.subject": "[PT. APEX TELCOM INKO] Pertanyaan — {item}",
     "form.mail.body": "Nama / perusahaan: {name}\nKontak: {contact}\nProduk: {item}\n\n{message}",
@@ -2891,7 +2891,7 @@ const i18n = {
     "form.msg": "留言",
     "form.msg.ph": "规格或牌号、预计数量、交期等",
     "form.submit": "打开邮件询价",
-    "form.note": "将打开发送至 han4797@gmail.com 的邮件草稿。",
+    "form.note": "将打开发送至 info@apextelcom.com 的邮件草稿。",
     "form.error": "请填写姓名/公司、联系方式与留言。",
     "form.mail.subject": "[PT. APEX TELCOM INKO] 询价 — {item}",
     "form.mail.body": "姓名 / 公司：{name}\n联系方式：{contact}\n品项：{item}\n\n{message}",
