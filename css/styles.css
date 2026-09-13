@@ -19,7 +19,7 @@
   --gold-soft: #f0e4c4;
   --gold-ink: #6b5314;
   --copper: #b87333;
-  --aluminum: #8a97a4;
+  --concentrate: #b87333;
   --tin: #6f8078;
   --nickel: #627078;
   --wood: #8a5a32;
@@ -29,7 +29,6 @@
   --ops: #4a7089;
   --laptop: #5f7d8c;
   --tablet: #7a8fa0;
-  --dross: #7a8680;
   --drone: #3f6f62;
   --koper: #7a8490;
   --cabin: #6a7580;
@@ -1221,7 +1220,7 @@ ul, ol { list-style: none; }
 }
 
 [data-tone="copper"] { --accent: var(--copper); }
-[data-tone="aluminum"] { --accent: var(--aluminum); }
+[data-tone="concentrate"] { --accent: var(--concentrate); }
 [data-tone="tin"] { --accent: var(--tin); }
 [data-tone="nickel"] { --accent: var(--nickel); }
 [data-tone="wood"] { --accent: var(--wood); }
@@ -1231,7 +1230,6 @@ ul, ol { list-style: none; }
 [data-tone="ops"] { --accent: var(--ops); }
 [data-tone="laptop"] { --accent: var(--laptop); }
 [data-tone="tablet"] { --accent: var(--tablet); }
-[data-tone="dross"] { --accent: var(--dross); }
 [data-tone="drone"] { --accent: var(--drone); }
 [data-tone="koper"] { --accent: var(--koper); }
 [data-tone="cabin"] { --accent: var(--cabin); }
@@ -1512,7 +1510,6 @@ ul, ol { list-style: none; }
 .map-pin.is-electronics .map-pin-dot { background: #4e8fc0; }
 .map-pin.is-hub .map-pin-dot { background: var(--navy); }
 .map-pin.is-korea .map-pin-dot { background: var(--slate); }
-.map-pin.is-aluminum .map-pin-dot { background: #c5d0d8; }
 .map-pin.is-wood .map-pin-dot { background: #7a9a4e; }
 .map-pin.is-diesel .map-pin-dot { background: #c4a056; }
 .map-pin.is-coal .map-pin-dot { background: #c4a056; }
@@ -1577,7 +1574,6 @@ ul, ol { list-style: none; }
   letter-spacing: 0.04em;
   color: var(--gold-2);
 }
-.map-pin.is-aluminum .map-pin-card em { color: #d5dde3; }
 .map-pin.is-wood .map-pin-card em { color: #c5d989; }
 .map-pin.is-diesel .map-pin-card em { color: #e0c07a; }
 .map-pin.is-coal .map-pin-card em { color: #e0c07a; }
@@ -2512,6 +2508,7 @@ ul, ol { list-style: none; }
   }
   .spec-badges li { padding: 8px 10px; }
   .spec-badges strong { font-size: 20px; }
+  .product-showroom[data-tone="concentrate"] .spec-badges strong { font-size: 16px; letter-spacing: 0.02em; }
   .product-thumbs {
     padding: 10px 12px 2px;
     gap: 6px;
@@ -2560,7 +2557,8 @@ ul, ol { list-style: none; }
 }
 
 @media (max-width: 1023px) {
-  .material:last-child { grid-column: 1 / -1; }
+  /* Full-bleed last tile only when the mosaic count is odd */
+  .material:last-child:nth-child(odd) { grid-column: 1 / -1; }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
