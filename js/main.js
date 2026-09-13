@@ -2981,6 +2981,16 @@ function detectLang() {
   return "ko";
 }
 
+const SITE_ORIGIN = "https://apextelcom.com/";
+
+/* Keep rel=canonical on the URL that actually serves this language,
+   so the hreflang alternates in <head> stay reciprocal. */
+function syncCanonical() {
+  const link = document.getElementById("canonicalLink");
+  if (!link) return;
+  link.setAttribute("href", queryLang() ? `${SITE_ORIGIN}?lang=${lang}` : SITE_ORIGIN);
+}
+
 let lang = detectLang();
 let menuOpen = false;
 
@@ -3238,6 +3248,7 @@ function applyLang(next) {
   lang = LANGS.includes(next) ? next : "ko";
   const copy = dict();
   document.documentElement.lang = HTML_LANG[lang] || "ko";
+  syncCanonical();
   langButtons.forEach((btn) => {
     const on = btn.getAttribute("data-lang") === lang;
     btn.classList.toggle("is-active", on);
@@ -3528,6 +3539,9 @@ langButtons.forEach((btn) => {
     const next = btn.getAttribute("data-lang");
     if (!LANGS.includes(next) || next === lang) return;
     localStorage.setItem(LANG_KEY, next);
+    const url = new URL(location.href);
+    url.searchParams.set("lang", next);
+    history.replaceState(null, "", url);
     applyLang(next);
   });
 });
