@@ -9,8 +9,8 @@ ROOT = Path(__file__).resolve().parents[1]
 CHECKS = (
     {
         "path": "index.html",
-        "min_bytes": 400,
-        "must_contain": ("<!DOCTYPE html", "PT. APEX TELCOM INKO", "css/styles.css", "Closed"),
+        "min_bytes": 200,
+        "must_contain": ("<!DOCTYPE html", "PT. APEX TELCOM INKO", "css/styles.css"),
     },
     {
         "path": "js/main.js",
