@@ -9,5 +9,6 @@ alwaysApply: true
 
 - Never write `FILE:/...` path stubs, empty files, or placeholder text in their place.
 - Do not commit a rewrite unless the result is full HTML/JS (DOCTYPE, real markup, real script).
-- After a large edit, confirm `index.html` still starts with `<!DOCTYPE html>` and is tens of kilobytes, not a few dozen bytes.
+- Site status as of 2026-11-17: closed notice only (brand + closed date). Keep that intentional state unless asked to reopen.
+- After a large edit, confirm `index.html` still starts with `<!DOCTYPE html>` and is a real page, not a stub.
 - GitHub Pages will refuse to deploy if `scripts/check-homepage.py` fails. Do not bypass or delete that check.

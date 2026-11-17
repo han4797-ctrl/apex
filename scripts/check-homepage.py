@@ -9,13 +9,13 @@ ROOT = Path(__file__).resolve().parents[1]
 CHECKS = (
     {
         "path": "index.html",
-        "min_bytes": 20_000,
-        "must_contain": ("<!DOCTYPE html", "PT. APEX TELCOM INKO", "css/styles.css"),
+        "min_bytes": 400,
+        "must_contain": ("<!DOCTYPE html", "PT. APEX TELCOM INKO", "css/styles.css", "Closed"),
     },
     {
         "path": "js/main.js",
-        "min_bytes": 10_000,
-        "must_contain": ("querySelector",),
+        "min_bytes": 40,
+        "must_contain": ("closed",),
     },
 )
 

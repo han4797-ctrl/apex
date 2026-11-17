@@ -1,3 +1,2 @@
 User-agent: *
-Allow: /
-Sitemap: https://apextelcom.com/sitemap.xml
+Disallow: /
