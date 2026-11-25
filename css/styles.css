@@ -3213,3 +3213,48 @@ a[href^="mailto:"] {
   .header-actions { gap: 6px; }
   .lang-toggle { min-width: 26px; padding: 0 5px; font-size: 9.5px; }
 }
+
+/* ---------- Leaner flow (from VL, 2026-11-25): folded CEO message, reports section, hero title ---------- */
+.ceo-details {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.ceo-details > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px 18px;
+  padding: 18px 22px;
+  background: var(--paper);
+}
+.ceo-details > summary::-webkit-details-marker { display: none; }
+.ceo-details > summary::after {
+  content: "+";
+  margin-left: auto;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--navy);
+}
+.ceo-details[open] > summary::after { content: "\2212"; }
+.ceo-details > summary .eyebrow { margin: 0; }
+.ceo-summary-title {
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
+}
+.ceo-details[open] > summary { border-bottom: 1px solid var(--line); }
+.ceo-details .ceo-card { border-radius: 0; box-shadow: none; }
+
+.reports-inner { scroll-margin-top: calc(var(--header) + 16px); }
+.reports-inner .sheet-tabs { margin-bottom: 18px; }
+.section.reports { padding-top: 0; }
+
+@media (min-width: 1024px) {
+  .hero-split .hero-inner h1 { font-size: clamp(40px, 3.9vw, 56px); }
+}
