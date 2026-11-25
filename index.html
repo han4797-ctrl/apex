@@ -31,13 +31,12 @@
   <meta name="twitter:description" content="탄게랑에서 전자를 계약하고 설치까지 실행합니다. 자원은 서브입니다.">
   <meta name="twitter:image" content="https://apextelcom.com/assets/electronic-board.jpg">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preload" as="image" type="image/webp" href="assets/opt/hero-ifp-1200.webp"
-        imagesrcset="assets/opt/hero-ifp-640.webp 640w, assets/opt/hero-ifp-900.webp 900w, assets/opt/hero-ifp-1200.webp 1200w" imagesizes="100vw">
+  <link rel="preload" as="image" type="image/webp" href="assets/opt/electronic-board-900.webp">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Noto+Serif+KR:wght@600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20261125c">
+  <link rel="stylesheet" href="css/styles.css?v=20261125d">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -99,27 +98,21 @@
 
   <main id="main">
     <section class="hero" id="top">
-      <div class="hero-media" aria-hidden="true">
-        <picture>
-          <source type="image/webp" srcset="assets/opt/hero-ifp-640.webp 640w, assets/opt/hero-ifp-900.webp 900w, assets/opt/hero-ifp-1200.webp 1200w" sizes="100vw">
-          <img src="assets/electronic-board.jpg" alt="" width="1200" height="900" fetchpriority="high">
-        </picture>
-      </div>
-      <div class="hero-chart" aria-hidden="true"></div>
-      <div class="container hero-inner">
+      <div class="container hero-split">
+      <div class="hero-inner">
         <p class="eyebrow reveal" data-i18n="hero.eyebrow">PT. APEX TELCOM INKO · Tangerang</p>
         <h1 class="reveal">
           <span data-i18n="hero.title1">인도네시아에서 전자를 계약하고</span><br>
           <em data-i18n="hero.title2">현지에서 설치까지 실행합니다</em>
         </h1>
-        <p class="hero-lead reveal" data-i18n="hero.lead">전자칠판·OPS·노트북·드론이 본편입니다. 자원 서브는 구리와 금입니다.</p>
+        <p class="hero-lead reveal" data-i18n="hero.lead">전자칠판·노트북·태블릿·드론이 본편입니다. 자원 서브는 구리와 금입니다.</p>
         <div class="hero-cta reveal">
           <a class="btn btn-primary" href="#products" data-i18n="hero.cta1">전자 품목 보기</a>
           <a class="btn btn-ghost" href="#contact" data-i18n="hero.cta2">견적 상담</a>
         </div>
         <ul class="hero-stats reveal">
           <li>
-            <strong>5</strong>
+            <strong>4</strong>
             <span data-i18n="hero.s2">전자 품목 · 본편</span>
           </li>
           <li>
@@ -127,6 +120,37 @@
             <span data-i18n="hero.s1">현지 계약 · 설치 · 인도</span>
           </li>
         </ul>
+      </div>
+      <div class="hero-mosaic" aria-label="전자 본편">
+        <figure>
+          <picture>
+            <source type="image/webp" srcset="assets/opt/electronic-board-400.webp 400w, assets/opt/electronic-board-640.webp 640w, assets/opt/electronic-board-900.webp 900w, assets/opt/electronic-board-1200.webp 1200w" sizes="(min-width: 1024px) 22vw, 46vw">
+            <img src="assets/electronic-board.jpg" alt="전자칠판" width="1200" height="900" fetchpriority="high">
+          </picture>
+          <figcaption data-i18n="p.eboard.t">전자칠판</figcaption>
+        </figure>
+        <figure>
+          <picture>
+            <source type="image/webp" srcset="assets/opt/laptop-400.webp 400w, assets/opt/laptop-640.webp 640w, assets/opt/laptop-900.webp 900w, assets/opt/laptop-1200.webp 1200w" sizes="(min-width: 1024px) 22vw, 46vw">
+            <img src="assets/laptop.jpg" alt="노트북" width="1200" height="900" loading="eager">
+          </picture>
+          <figcaption data-i18n="p.laptop.t">노트북</figcaption>
+        </figure>
+        <figure>
+          <picture>
+            <source type="image/webp" srcset="assets/opt/tablet-400.webp 400w, assets/opt/tablet-640.webp 640w, assets/opt/tablet-900.webp 900w, assets/opt/tablet-1200.webp 1200w" sizes="(min-width: 1024px) 22vw, 46vw">
+            <img src="assets/tablet.jpg" alt="태블릿PC" width="1200" height="900" loading="eager">
+          </picture>
+          <figcaption data-i18n="p.tablet.t">태블릿PC</figcaption>
+        </figure>
+        <figure>
+          <picture>
+            <source type="image/webp" srcset="assets/opt/agricultural-drone-400.webp 400w, assets/opt/agricultural-drone-640.webp 640w, assets/opt/agricultural-drone-900.webp 900w, assets/opt/agricultural-drone-1200.webp 1200w" sizes="(min-width: 1024px) 22vw, 46vw">
+            <img src="assets/agricultural-drone.jpg" alt="농업용 드론" width="1200" height="800" loading="eager">
+          </picture>
+          <figcaption data-i18n="p.drone.t">농업용 드론</figcaption>
+        </figure>
+      </div>
       </div>
     </section>
 
@@ -2032,6 +2056,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20261125b"></script>
+  <script src="js/main.js?v=20261125d"></script>
 </body>
 </html>
